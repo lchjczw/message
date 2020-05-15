@@ -97,14 +97,14 @@
                 <div class="layui-row">
                     <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
                         <div class="layui-form-item">
-                            <input type="text" name="vercode" id="captcha" lay-verify="required|vercodes"
+                            <input type="text" name="captcha" id="captcha" lay-verify="required|vercodes"
                                    autocomplete="off" placeholder="验证码" class="layui-input" maxlength="4">
                             <i class="layui-icon layui-icon-vercode zyl_lofo_icon"></i>
                         </div>
                     </div>
                     <img src="{{captcha_src()}}" style="cursor: pointer"
                          onclick="this.src='{{captcha_src()}}'+Math.random()">
-
+                    {{ csrf_field() }}
 
                     <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
                         <div class="zyl_lofo_vercode zylVerCode" onclick="zylVerCode()"></div>
@@ -138,7 +138,6 @@
                     return '账号至少得5个字符';
                 }
             }
-            , pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格']
             , vercodes: function (value) {
             }
             , content: function (value) {
@@ -152,8 +151,21 @@
                 title: '最终的提交信息'
             })
             $.ajax({
-               url:''
-            });
+                url: '/auth/login',
+                data: data.field,
+                type: 'post',
+                dataType: "json",
+                success: function (response) {
+                    layer.msg(response.message);
+                },
+                error : function (msg ) {
+                    var json=JSON.parse(msg.responseText);
+                    $.each(json.errors, function(idx, obj) {
+                        layer.msg(obj[0]);
+                        return false;
+                    });
+                },
+            })
             return false;
         });
 

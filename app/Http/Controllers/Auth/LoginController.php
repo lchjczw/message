@@ -46,8 +46,8 @@ class LoginController extends Controller
             'password' => 'required',
             'captcha' => 'required|captcha',
         ], [
-            'captcha.required' => trans('validation.required'),
-            'captcha.captcha' => trans('validation.captcha'),
+            'captcha.required' => '验证码必填',
+            'captcha.captcha' => '验证码不正确',
         ]);
     }
 

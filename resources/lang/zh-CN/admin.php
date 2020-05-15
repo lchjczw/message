@@ -107,6 +107,7 @@ return [
     'roles'                 => '角色',
     'permissions'           => '权限',
     'slug'                  => '标识',
+    'phone'                 => '电话',
     'created_at'            => '创建时间',
     'updated_at'            => '更新时间',
     'alert'                 => '注意',

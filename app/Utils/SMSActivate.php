@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 class SMSActivate
 {
     private $url = 'https://sms-activate.ru/stubs/handler_api.php';
-    private $apiKey = '9cd7A1900e9d2689A2ede14521e11004';
+    private $apiKey;
 
     protected static $instance;
 
@@ -19,6 +19,11 @@ class SMSActivate
             self::$instance = new self();
         }
         return self::$instance;
+    }
+
+    public function __construct()
+    {
+        $this->apiKey = env('API_KEY');
     }
 
     public function getBalance()

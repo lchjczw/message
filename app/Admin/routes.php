@@ -14,4 +14,10 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->resource('countries', 'CountryController');
+    $router->resource('project', 'ProjectController');
+
+    $router->resource('user', 'UserController');
+    $router->resource('rechargeDetail', 'RechargeDetailController');
+    $router->resource('codeReceivingRecord', 'CodeReceivingRecordController');
 });
