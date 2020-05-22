@@ -31,8 +31,6 @@ class UserController extends AdminController
             $grid->created_at->sortable();
             $grid->updated_at->sortable();
 
-            $grid->actions(new AddUserMoneyAction());
-
             $grid->disableViewButton();
 
             $grid->filter(function (Grid\Filter $filter) {

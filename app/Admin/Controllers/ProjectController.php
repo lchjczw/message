@@ -22,7 +22,6 @@ class ProjectController extends AdminController
 
             $grid->filter(function($filter){
                 // 展开过滤器
-                $filter->expand();
 
                 // 在这里添加字段过滤器
                 $filter->equal('number', '编号');

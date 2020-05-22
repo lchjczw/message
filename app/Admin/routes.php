@@ -20,4 +20,8 @@ Route::group([
     $router->resource('user', 'UserController');
     $router->resource('rechargeDetail', 'RechargeDetailController');
     $router->resource('codeReceivingRecord', 'CodeReceivingRecordController');
+    $router->resource('addUserMoney', 'AddUserMoneyController');
+
+    $router->post('addUserMoneyAction', 'AddUserMoneyController@addUserMoneyAction');
+
 });

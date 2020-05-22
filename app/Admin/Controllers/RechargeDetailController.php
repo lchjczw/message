@@ -3,15 +3,18 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\RechargeDetail;
+use App\Models\User;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
+use Dcat\Admin\Models\Administrator;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
 
 class RechargeDetailController extends AdminController
 {
 
-    protected $title='充值明细查询';
+    protected $title = '充值明细查询';
+
     /**
      * Make a grid builder.
      *
@@ -21,8 +24,12 @@ class RechargeDetailController extends AdminController
     {
         return Grid::make(new RechargeDetail(), function (Grid $grid) {
             $grid->id->sortable();
-            $grid->admin_user_id;
-            $grid->user_id;
+            $grid->column('admin_user_id')->display(function ($admin_user_id) {
+                return Administrator::find($admin_user_id)->username;
+            });
+            $grid->column('user_id')->display(function ($user_id) {
+                return User::find($user_id)->name;
+            });
             $grid->amount;
             $grid->created_at;
             $grid->updated_at->sortable();

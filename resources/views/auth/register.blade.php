@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
-                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1">立即登录</button>
+                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1">立即注册</button>
             </div>
         </form>
     </div>
@@ -179,11 +179,14 @@
                 type: 'post',
                 dataType: "json",
                 success: function (response) {
-                    layer.msg(response.message);
+                    layer.msg('注册成功', function () {
+                        window.location.href = '/';
+                    });
+
                 },
-                error : function (msg ) {
-                    var json=JSON.parse(msg.responseText);
-                    $.each(json.errors, function(idx, obj) {
+                error: function (msg) {
+                    var json = JSON.parse(msg.responseText);
+                    $.each(json.errors, function (idx, obj) {
                         layer.msg(obj[0]);
                         return false;
                     });

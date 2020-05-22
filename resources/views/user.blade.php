@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>layuiAdmin std - 通用后台管理模板系统（iframe标准版）</title>
+    <title>奥利给短信聚合平台</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -86,7 +86,7 @@
 
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="在线取码"
+                        <a href="javascript:;" lay-href="/getCode/index" lay-tips="在线取码"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-heart-fill"></i>
                             <cite>在线取码</cite>
@@ -94,7 +94,7 @@
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="项目列表"
+                        <a href="javascript:;" lay-href="/project/index" lay-tips="项目列表"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-template"></i>
                             <cite>项目列表</cite>
@@ -102,7 +102,7 @@
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="账户充值"
+                        <a href="javascript:;" lay-href="/user/recharge" lay-tips="账户充值"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-rmb"></i>
                             <cite>账户充值</cite>
@@ -110,7 +110,7 @@
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="充值明细"
+                        <a href="javascript:;" lay-href="/user/rechargeDetail" lay-tips="充值明细"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-diamond"></i>
                             <cite>充值明细</cite>
@@ -118,24 +118,16 @@
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="已接短信"
+                        <a href="javascript:;" lay-href="/codeReceive/index" lay-tips="已接短信"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-component"></i>
                             <cite>已接短信</cite>
                         </a>
                     </li>
 
-                    <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="已接号码"
-                           lay-direction="2">
-                            <i class="layui-icon layui-icon-circle"></i>
-                            <cite>已接号码</cite>
-                        </a>
-                    </li>
-
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/" lay-tips="个人信息"
+                        <a href="javascript:;" lay-href="/user/edit" lay-tips="个人信息"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-friends"></i>
                             <cite>个人信息</cite>
@@ -175,7 +167,7 @@
         <!-- 主体内容 -->
         <div class="layui-body" id="LAY_app_body">
             <div class="layadmin-tabsbody-item layui-show">
-                <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+                <iframe src="/welcome" frameborder="0" class="layadmin-iframe"></iframe>
             </div>
         </div>
 

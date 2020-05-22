@@ -147,20 +147,20 @@
 
         //监听提交
         form.on('submit(demo1)', function (data) {
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
             $.ajax({
                 url: '/auth/login',
                 data: data.field,
                 type: 'post',
                 dataType: "json",
                 success: function (response) {
-                    layer.msg(response.message);
+                    layer.msg('登录成功', function () {
+                        window.location.href = '/';
+                    });
+
                 },
-                error : function (msg ) {
-                    var json=JSON.parse(msg.responseText);
-                    $.each(json.errors, function(idx, obj) {
+                error: function (msg) {
+                    var json = JSON.parse(msg.responseText);
+                    $.each(json.errors, function (idx, obj) {
                         layer.msg(obj[0]);
                         return false;
                     });

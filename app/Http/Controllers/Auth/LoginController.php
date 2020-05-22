@@ -57,4 +57,14 @@ class LoginController extends Controller
         return 'name';
     }
 
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        return response()->json(['code' => 0]);
+    }
+
 }
