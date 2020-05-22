@@ -11,7 +11,7 @@
  Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 15/05/2020 17:01:47
+ Date: 22/05/2020 17:03:03
 */
 
 SET NAMES utf8mb4;
@@ -31,23 +31,24 @@ CREATE TABLE `admin_menu`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_menu
 -- ----------------------------
 INSERT INTO `admin_menu` VALUES (1, 0, 1, 'Index', 'feather icon-bar-chart-2', '/', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (2, 0, 2, 'Admin', 'feather icon-settings', '', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (3, 2, 3, 'Users', '', 'auth/users', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (4, 2, 4, 'Roles', '', 'auth/roles', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (5, 2, 5, 'Permission', '', 'auth/permissions', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (6, 2, 6, 'Menu', '', 'auth/menu', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (7, 2, 7, 'Operation log', '', 'auth/logs', '2020-05-13 06:09:44', NULL);
-INSERT INTO `admin_menu` VALUES (8, 0, 8, '国家管理', 'fa-adjust', 'countries', '2020-05-15 15:20:56', '2020-05-15 15:20:56');
-INSERT INTO `admin_menu` VALUES (9, 0, 9, '项目管理', 'fa-amazon', 'project', '2020-05-15 16:05:36', '2020-05-15 16:05:36');
-INSERT INTO `admin_menu` VALUES (10, 0, 10, '用户管理', 'fa-user-circle', 'user', '2020-05-15 16:17:20', '2020-05-15 16:17:20');
-INSERT INTO `admin_menu` VALUES (11, 0, 11, '充值明细', 'fa-apple', 'rechargeDetail', '2020-05-15 16:23:14', '2020-05-15 16:23:14');
-INSERT INTO `admin_menu` VALUES (12, 0, 12, '接码记录', 'fa-bars', 'codeReceivingRecord', '2020-05-15 16:27:38', '2020-05-15 16:27:38');
+INSERT INTO `admin_menu` VALUES (2, 0, 8, 'Admin', 'feather icon-settings', '', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (3, 2, 9, 'Users', '', 'auth/users', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (4, 2, 10, 'Roles', '', 'auth/roles', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (5, 2, 11, 'Permission', '', 'auth/permissions', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (6, 2, 12, 'Menu', '', 'auth/menu', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (7, 2, 13, 'Operation log', '', 'auth/logs', '2020-05-13 06:09:44', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (8, 0, 2, '国家管理', 'fa-adjust', 'countries', '2020-05-15 15:20:56', '2020-05-22 15:54:24');
+INSERT INTO `admin_menu` VALUES (9, 0, 3, '项目管理', 'fa-amazon', 'project', '2020-05-15 16:05:36', '2020-05-22 15:54:24');
+INSERT INTO `admin_menu` VALUES (10, 0, 4, '用户管理', 'fa-user-circle', 'user', '2020-05-15 16:17:20', '2020-05-22 15:54:24');
+INSERT INTO `admin_menu` VALUES (11, 0, 6, '充值明细', 'fa-apple', 'rechargeDetail', '2020-05-15 16:23:14', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (12, 0, 7, '接码记录', 'fa-bars', 'codeReceivingRecord', '2020-05-15 16:27:38', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (13, 0, 5, '充值', 'fa-500px', 'addUserMoney', '2020-05-22 15:57:00', '2020-05-22 15:57:05');
 
 -- ----------------------------
 -- Table structure for admin_operation_log
@@ -64,7 +65,7 @@ CREATE TABLE `admin_operation_log`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `admin_operation_log_user_id_index`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 255 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 464 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -323,6 +324,215 @@ INSERT INTO `admin_operation_log` VALUES (251, 1, 'admin/dcat-api/action', 'POST
 INSERT INTO `admin_operation_log` VALUES (252, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-15 16:57:16', '2020-05-15 16:57:16');
 INSERT INTO `admin_operation_log` VALUES (253, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-15 16:57:23', '2020-05-15 16:57:23');
 INSERT INTO `admin_operation_log` VALUES (254, 1, 'admin/helpers/extensions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-15 17:00:28', '2020-05-15 17:00:28');
+INSERT INTO `admin_operation_log` VALUES (255, 0, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:19', '2020-05-20 19:27:19');
+INSERT INTO `admin_operation_log` VALUES (256, 0, 'admin/auth/login', 'POST', '127.0.0.1', '{\"_token\":\"lZKQP5XBOYOMSWW73oIZI5HwkSilafvGMnVNTNtI\",\"username\":\"admin\",\"password\":\"adm******\",\"remember\":\"1\"}', '2020-05-20 19:27:24', '2020-05-20 19:27:24');
+INSERT INTO `admin_operation_log` VALUES (257, 1, 'admin', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:24', '2020-05-20 19:27:24');
+INSERT INTO `admin_operation_log` VALUES (258, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:26', '2020-05-20 19:27:26');
+INSERT INTO `admin_operation_log` VALUES (259, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-20 19:27:27', '2020-05-20 19:27:27');
+INSERT INTO `admin_operation_log` VALUES (260, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:27', '2020-05-20 19:27:27');
+INSERT INTO `admin_operation_log` VALUES (261, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-20 19:27:28', '2020-05-20 19:27:28');
+INSERT INTO `admin_operation_log` VALUES (262, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:28', '2020-05-20 19:27:28');
+INSERT INTO `admin_operation_log` VALUES (263, 1, 'admin/project', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:31', '2020-05-20 19:27:31');
+INSERT INTO `admin_operation_log` VALUES (264, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-20 19:27:31', '2020-05-20 19:27:31');
+INSERT INTO `admin_operation_log` VALUES (265, 1, 'admin/countries', 'GET', '127.0.0.1', '[]', '2020-05-20 19:27:32', '2020-05-20 19:27:32');
+INSERT INTO `admin_operation_log` VALUES (266, 0, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:17', '2020-05-22 10:22:17');
+INSERT INTO `admin_operation_log` VALUES (267, 0, 'admin/auth/login', 'POST', '127.0.0.1', '{\"_token\":\"PcyZRP87FstRGE8NVNAUxkuAJ3JKeffwDkuQyIeV\",\"username\":\"admin\",\"password\":\"adm******\",\"remember\":\"1\"}', '2020-05-22 10:22:22', '2020-05-22 10:22:22');
+INSERT INTO `admin_operation_log` VALUES (268, 1, 'admin', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:23', '2020-05-22 10:22:23');
+INSERT INTO `admin_operation_log` VALUES (269, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:24', '2020-05-22 10:22:24');
+INSERT INTO `admin_operation_log` VALUES (270, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:25', '2020-05-22 10:22:25');
+INSERT INTO `admin_operation_log` VALUES (271, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:25', '2020-05-22 10:22:25');
+INSERT INTO `admin_operation_log` VALUES (272, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:26', '2020-05-22 10:22:26');
+INSERT INTO `admin_operation_log` VALUES (273, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:26', '2020-05-22 10:22:26');
+INSERT INTO `admin_operation_log` VALUES (274, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"jInLHBozknTCKjQxbV32shWiUdZE63NA5kDZmadE\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 10:22:30', '2020-05-22 10:22:30');
+INSERT INTO `admin_operation_log` VALUES (275, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:30', '2020-05-22 10:22:30');
+INSERT INTO `admin_operation_log` VALUES (276, 1, 'admin/project', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:33', '2020-05-22 10:22:33');
+INSERT INTO `admin_operation_log` VALUES (277, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:33', '2020-05-22 10:22:33');
+INSERT INTO `admin_operation_log` VALUES (278, 1, 'admin/countries', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:45', '2020-05-22 10:22:45');
+INSERT INTO `admin_operation_log` VALUES (279, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:46', '2020-05-22 10:22:46');
+INSERT INTO `admin_operation_log` VALUES (280, 1, 'admin/project', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:53', '2020-05-22 10:22:53');
+INSERT INTO `admin_operation_log` VALUES (281, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:54', '2020-05-22 10:22:54');
+INSERT INTO `admin_operation_log` VALUES (282, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:56', '2020-05-22 10:22:56');
+INSERT INTO `admin_operation_log` VALUES (283, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:57', '2020-05-22 10:22:57');
+INSERT INTO `admin_operation_log` VALUES (284, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:57', '2020-05-22 10:22:57');
+INSERT INTO `admin_operation_log` VALUES (285, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:59', '2020-05-22 10:22:59');
+INSERT INTO `admin_operation_log` VALUES (286, 1, 'admin/countries', 'GET', '127.0.0.1', '[]', '2020-05-22 10:22:59', '2020-05-22 10:22:59');
+INSERT INTO `admin_operation_log` VALUES (287, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 10:22:59', '2020-05-22 10:22:59');
+INSERT INTO `admin_operation_log` VALUES (288, 1, 'admin', 'GET', '127.0.0.1', '[]', '2020-05-22 15:38:13', '2020-05-22 15:38:13');
+INSERT INTO `admin_operation_log` VALUES (289, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:38:15', '2020-05-22 15:38:15');
+INSERT INTO `admin_operation_log` VALUES (290, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:38:16', '2020-05-22 15:38:16');
+INSERT INTO `admin_operation_log` VALUES (291, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 15:38:17', '2020-05-22 15:38:17');
+INSERT INTO `admin_operation_log` VALUES (292, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:39:49', '2020-05-22 15:39:49');
+INSERT INTO `admin_operation_log` VALUES (293, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:42:13', '2020-05-22 15:42:13');
+INSERT INTO `admin_operation_log` VALUES (294, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:42:15', '2020-05-22 15:42:15');
+INSERT INTO `admin_operation_log` VALUES (295, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:42:49', '2020-05-22 15:42:49');
+INSERT INTO `admin_operation_log` VALUES (296, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:43:09', '2020-05-22 15:43:09');
+INSERT INTO `admin_operation_log` VALUES (297, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:43:32', '2020-05-22 15:43:32');
+INSERT INTO `admin_operation_log` VALUES (298, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:43:35', '2020-05-22 15:43:35');
+INSERT INTO `admin_operation_log` VALUES (299, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:44:25', '2020-05-22 15:44:25');
+INSERT INTO `admin_operation_log` VALUES (300, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:44:27', '2020-05-22 15:44:27');
+INSERT INTO `admin_operation_log` VALUES (301, 1, 'admin/dcat-api/action', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_action\":\"App_Admin_Actions_Grid_AddUserMoneyAction\",\"_key\":\"4\"}', '2020-05-22 15:45:51', '2020-05-22 15:45:51');
+INSERT INTO `admin_operation_log` VALUES (302, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:50:10', '2020-05-22 15:50:10');
+INSERT INTO `admin_operation_log` VALUES (303, 1, 'admin/user', 'GET', '127.0.0.1', '[]', '2020-05-22 15:51:01', '2020-05-22 15:51:01');
+INSERT INTO `admin_operation_log` VALUES (304, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:36', '2020-05-22 15:52:36');
+INSERT INTO `admin_operation_log` VALUES (305, 1, 'admin/project', 'GET', '127.0.0.1', '[]', '2020-05-22 15:52:42', '2020-05-22 15:52:42');
+INSERT INTO `admin_operation_log` VALUES (306, 1, 'admin/countries', 'GET', '127.0.0.1', '[]', '2020-05-22 15:52:42', '2020-05-22 15:52:42');
+INSERT INTO `admin_operation_log` VALUES (307, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:44', '2020-05-22 15:52:44');
+INSERT INTO `admin_operation_log` VALUES (308, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '[]', '2020-05-22 15:52:45', '2020-05-22 15:52:45');
+INSERT INTO `admin_operation_log` VALUES (309, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:45', '2020-05-22 15:52:45');
+INSERT INTO `admin_operation_log` VALUES (310, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '[]', '2020-05-22 15:52:53', '2020-05-22 15:52:53');
+INSERT INTO `admin_operation_log` VALUES (311, 1, 'admin', 'GET', '127.0.0.1', '[]', '2020-05-22 15:52:53', '2020-05-22 15:52:53');
+INSERT INTO `admin_operation_log` VALUES (312, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:55', '2020-05-22 15:52:55');
+INSERT INTO `admin_operation_log` VALUES (313, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:56', '2020-05-22 15:52:56');
+INSERT INTO `admin_operation_log` VALUES (314, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:56', '2020-05-22 15:52:56');
+INSERT INTO `admin_operation_log` VALUES (315, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:57', '2020-05-22 15:52:57');
+INSERT INTO `admin_operation_log` VALUES (316, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:52:58', '2020-05-22 15:52:58');
+INSERT INTO `admin_operation_log` VALUES (317, 1, 'admin/helpers/extensions', 'GET', '127.0.0.1', '[]', '2020-05-22 15:53:00', '2020-05-22 15:53:00');
+INSERT INTO `admin_operation_log` VALUES (318, 1, 'admin/helpers/extensions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:53:01', '2020-05-22 15:53:01');
+INSERT INTO `admin_operation_log` VALUES (319, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:53:02', '2020-05-22 15:53:02');
+INSERT INTO `admin_operation_log` VALUES (320, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2020-05-22 15:53:47', '2020-05-22 15:53:47');
+INSERT INTO `admin_operation_log` VALUES (321, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:53:47', '2020-05-22 15:53:47');
+INSERT INTO `admin_operation_log` VALUES (322, 1, 'admin/helpers/extensions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:00', '2020-05-22 15:54:00');
+INSERT INTO `admin_operation_log` VALUES (323, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:01', '2020-05-22 15:54:01');
+INSERT INTO `admin_operation_log` VALUES (324, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:01', '2020-05-22 15:54:01');
+INSERT INTO `admin_operation_log` VALUES (325, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:02', '2020-05-22 15:54:02');
+INSERT INTO `admin_operation_log` VALUES (326, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:03', '2020-05-22 15:54:03');
+INSERT INTO `admin_operation_log` VALUES (327, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:05', '2020-05-22 15:54:05');
+INSERT INTO `admin_operation_log` VALUES (328, 1, 'admin/auth/users', 'GET', '127.0.0.1', '[]', '2020-05-22 15:54:14', '2020-05-22 15:54:14');
+INSERT INTO `admin_operation_log` VALUES (329, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:15', '2020-05-22 15:54:15');
+INSERT INTO `admin_operation_log` VALUES (330, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '[]', '2020-05-22 15:54:18', '2020-05-22 15:54:18');
+INSERT INTO `admin_operation_log` VALUES (331, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":10},{\\\"id\\\":11},{\\\"id\\\":12},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2020-05-22 15:54:24', '2020-05-22 15:54:24');
+INSERT INTO `admin_operation_log` VALUES (332, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:24', '2020-05-22 15:54:24');
+INSERT INTO `admin_operation_log` VALUES (333, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2020-05-22 15:54:25', '2020-05-22 15:54:25');
+INSERT INTO `admin_operation_log` VALUES (334, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:33', '2020-05-22 15:54:33');
+INSERT INTO `admin_operation_log` VALUES (335, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:39', '2020-05-22 15:54:39');
+INSERT INTO `admin_operation_log` VALUES (336, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:41', '2020-05-22 15:54:41');
+INSERT INTO `admin_operation_log` VALUES (337, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:44', '2020-05-22 15:54:44');
+INSERT INTO `admin_operation_log` VALUES (338, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:45', '2020-05-22 15:54:45');
+INSERT INTO `admin_operation_log` VALUES (339, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:46', '2020-05-22 15:54:46');
+INSERT INTO `admin_operation_log` VALUES (340, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:47', '2020-05-22 15:54:47');
+INSERT INTO `admin_operation_log` VALUES (341, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:48', '2020-05-22 15:54:48');
+INSERT INTO `admin_operation_log` VALUES (342, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:54:50', '2020-05-22 15:54:50');
+INSERT INTO `admin_operation_log` VALUES (343, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:56:45', '2020-05-22 15:56:45');
+INSERT INTO `admin_operation_log` VALUES (344, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":null,\"title\":\"\\u5145\\u503c\",\"icon\":\"fa-500px\",\"uri\":\"addUserMoney\",\"roles\":[\"1\",null],\"permissions\":\"2,3,4,5,6\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 15:57:00', '2020-05-22 15:57:00');
+INSERT INTO `admin_operation_log` VALUES (345, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:57:01', '2020-05-22 15:57:01');
+INSERT INTO `admin_operation_log` VALUES (346, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":10},{\\\"id\\\":13},{\\\"id\\\":11},{\\\"id\\\":12},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2020-05-22 15:57:05', '2020-05-22 15:57:05');
+INSERT INTO `admin_operation_log` VALUES (347, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:57:05', '2020-05-22 15:57:05');
+INSERT INTO `admin_operation_log` VALUES (348, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2020-05-22 15:57:06', '2020-05-22 15:57:06');
+INSERT INTO `admin_operation_log` VALUES (349, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 15:57:08', '2020-05-22 15:57:08');
+INSERT INTO `admin_operation_log` VALUES (350, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 15:57:09', '2020-05-22 15:57:09');
+INSERT INTO `admin_operation_log` VALUES (351, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 15:57:51', '2020-05-22 15:57:51');
+INSERT INTO `admin_operation_log` VALUES (352, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:00:11', '2020-05-22 16:00:11');
+INSERT INTO `admin_operation_log` VALUES (353, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:00:24', '2020-05-22 16:00:24');
+INSERT INTO `admin_operation_log` VALUES (354, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:00:45', '2020-05-22 16:00:45');
+INSERT INTO `admin_operation_log` VALUES (355, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:01:02', '2020-05-22 16:01:02');
+INSERT INTO `admin_operation_log` VALUES (356, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:01:07', '2020-05-22 16:01:07');
+INSERT INTO `admin_operation_log` VALUES (357, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:01:51', '2020-05-22 16:01:51');
+INSERT INTO `admin_operation_log` VALUES (358, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:02:41', '2020-05-22 16:02:41');
+INSERT INTO `admin_operation_log` VALUES (359, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:03:39', '2020-05-22 16:03:39');
+INSERT INTO `admin_operation_log` VALUES (360, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:04:08', '2020-05-22 16:04:08');
+INSERT INTO `admin_operation_log` VALUES (361, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:06:38', '2020-05-22 16:06:38');
+INSERT INTO `admin_operation_log` VALUES (362, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:06:51', '2020-05-22 16:06:51');
+INSERT INTO `admin_operation_log` VALUES (363, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:07:04', '2020-05-22 16:07:04');
+INSERT INTO `admin_operation_log` VALUES (364, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:07:28', '2020-05-22 16:07:28');
+INSERT INTO `admin_operation_log` VALUES (365, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:09:11', '2020-05-22 16:09:11');
+INSERT INTO `admin_operation_log` VALUES (366, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":null,\"money\":null,\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:09:13', '2020-05-22 16:09:13');
+INSERT INTO `admin_operation_log` VALUES (367, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":null,\"money\":null,\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:09:49', '2020-05-22 16:09:49');
+INSERT INTO `admin_operation_log` VALUES (368, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:10:00', '2020-05-22 16:10:00');
+INSERT INTO `admin_operation_log` VALUES (369, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":null,\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:10:02', '2020-05-22 16:10:02');
+INSERT INTO `admin_operation_log` VALUES (370, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:10:22', '2020-05-22 16:10:22');
+INSERT INTO `admin_operation_log` VALUES (371, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:10:27', '2020-05-22 16:10:27');
+INSERT INTO `admin_operation_log` VALUES (372, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:11:47', '2020-05-22 16:11:47');
+INSERT INTO `admin_operation_log` VALUES (373, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:11:53', '2020-05-22 16:11:53');
+INSERT INTO `admin_operation_log` VALUES (374, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:12:32', '2020-05-22 16:12:32');
+INSERT INTO `admin_operation_log` VALUES (375, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:13:11', '2020-05-22 16:13:11');
+INSERT INTO `admin_operation_log` VALUES (376, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:13:49', '2020-05-22 16:13:49');
+INSERT INTO `admin_operation_log` VALUES (377, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:14:47', '2020-05-22 16:14:47');
+INSERT INTO `admin_operation_log` VALUES (378, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:14:51', '2020-05-22 16:14:51');
+INSERT INTO `admin_operation_log` VALUES (379, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:16:00', '2020-05-22 16:16:00');
+INSERT INTO `admin_operation_log` VALUES (380, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:16:09', '2020-05-22 16:16:09');
+INSERT INTO `admin_operation_log` VALUES (381, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:16:34', '2020-05-22 16:16:34');
+INSERT INTO `admin_operation_log` VALUES (382, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:17:07', '2020-05-22 16:17:07');
+INSERT INTO `admin_operation_log` VALUES (383, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:17:14', '2020-05-22 16:17:14');
+INSERT INTO `admin_operation_log` VALUES (384, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:17:28', '2020-05-22 16:17:28');
+INSERT INTO `admin_operation_log` VALUES (385, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:17:59', '2020-05-22 16:17:59');
+INSERT INTO `admin_operation_log` VALUES (386, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:18:02', '2020-05-22 16:18:02');
+INSERT INTO `admin_operation_log` VALUES (387, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:18:17', '2020-05-22 16:18:17');
+INSERT INTO `admin_operation_log` VALUES (388, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:19:08', '2020-05-22 16:19:08');
+INSERT INTO `admin_operation_log` VALUES (389, 1, 'admin/addUserMoney', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:19:11', '2020-05-22 16:19:11');
+INSERT INTO `admin_operation_log` VALUES (390, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:19:24', '2020-05-22 16:19:24');
+INSERT INTO `admin_operation_log` VALUES (391, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:19:27', '2020-05-22 16:19:27');
+INSERT INTO `admin_operation_log` VALUES (392, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:20:45', '2020-05-22 16:20:45');
+INSERT INTO `admin_operation_log` VALUES (393, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:20:57', '2020-05-22 16:20:57');
+INSERT INTO `admin_operation_log` VALUES (394, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:21:04', '2020-05-22 16:21:04');
+INSERT INTO `admin_operation_log` VALUES (395, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:21:05', '2020-05-22 16:21:05');
+INSERT INTO `admin_operation_log` VALUES (396, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:21:06', '2020-05-22 16:21:06');
+INSERT INTO `admin_operation_log` VALUES (397, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:21:07', '2020-05-22 16:21:07');
+INSERT INTO `admin_operation_log` VALUES (398, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/user\"}', '2020-05-22 16:21:20', '2020-05-22 16:21:20');
+INSERT INTO `admin_operation_log` VALUES (399, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:21:45', '2020-05-22 16:21:45');
+INSERT INTO `admin_operation_log` VALUES (400, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:21:48', '2020-05-22 16:21:48');
+INSERT INTO `admin_operation_log` VALUES (401, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:22:05', '2020-05-22 16:22:05');
+INSERT INTO `admin_operation_log` VALUES (402, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:22:30', '2020-05-22 16:22:30');
+INSERT INTO `admin_operation_log` VALUES (403, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:22:54', '2020-05-22 16:22:54');
+INSERT INTO `admin_operation_log` VALUES (404, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:22:58', '2020-05-22 16:22:58');
+INSERT INTO `admin_operation_log` VALUES (405, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:23:20', '2020-05-22 16:23:20');
+INSERT INTO `admin_operation_log` VALUES (406, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:23:24', '2020-05-22 16:23:24');
+INSERT INTO `admin_operation_log` VALUES (407, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:24:39', '2020-05-22 16:24:39');
+INSERT INTO `admin_operation_log` VALUES (408, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:24:51', '2020-05-22 16:24:51');
+INSERT INTO `admin_operation_log` VALUES (409, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"11\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:24:54', '2020-05-22 16:24:54');
+INSERT INTO `admin_operation_log` VALUES (410, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:25:16', '2020-05-22 16:25:16');
+INSERT INTO `admin_operation_log` VALUES (411, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:25:20', '2020-05-22 16:25:20');
+INSERT INTO `admin_operation_log` VALUES (412, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:26:35', '2020-05-22 16:26:35');
+INSERT INTO `admin_operation_log` VALUES (413, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:26:39', '2020-05-22 16:26:39');
+INSERT INTO `admin_operation_log` VALUES (414, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:27:03', '2020-05-22 16:27:03');
+INSERT INTO `admin_operation_log` VALUES (415, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:27:05', '2020-05-22 16:27:05');
+INSERT INTO `admin_operation_log` VALUES (416, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:38', '2020-05-22 16:28:38');
+INSERT INTO `admin_operation_log` VALUES (417, 1, 'admin/countries', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:40', '2020-05-22 16:28:40');
+INSERT INTO `admin_operation_log` VALUES (418, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:41', '2020-05-22 16:28:41');
+INSERT INTO `admin_operation_log` VALUES (419, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:42', '2020-05-22 16:28:42');
+INSERT INTO `admin_operation_log` VALUES (420, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:43', '2020-05-22 16:28:43');
+INSERT INTO `admin_operation_log` VALUES (421, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:44', '2020-05-22 16:28:44');
+INSERT INTO `admin_operation_log` VALUES (422, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:45', '2020-05-22 16:28:45');
+INSERT INTO `admin_operation_log` VALUES (423, 1, 'admin/project/create', 'GET', '127.0.0.1', '[]', '2020-05-22 16:28:47', '2020-05-22 16:28:47');
+INSERT INTO `admin_operation_log` VALUES (424, 1, 'admin/project/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:28:48', '2020-05-22 16:28:48');
+INSERT INTO `admin_operation_log` VALUES (425, 1, 'admin/project', 'POST', '127.0.0.1', '{\"icon\":null,\"file-icon\":null,\"_file_\":null,\"number\":\"1\",\"name\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:28:59', '2020-05-22 16:28:59');
+INSERT INTO `admin_operation_log` VALUES (426, 1, 'admin/project', 'POST', '127.0.0.1', '{\"_id\":\"GSFbCtPZzExmpWLV\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"upload_column\":\"icon\",\"id\":\"WU_FILE_0\",\"name\":\"admin.jpg\",\"type\":\"image\\/jpeg\",\"lastModifiedDate\":\"Mon Apr 14 2008 02:35:16 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"20097\"}', '2020-05-22 16:29:24', '2020-05-22 16:29:24');
+INSERT INTO `admin_operation_log` VALUES (427, 1, 'admin/project', 'POST', '127.0.0.1', '{\"icon\":\"images\\/admin.jpg\",\"file-icon\":null,\"_file_\":null,\"number\":\"1\",\"name\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:29:27', '2020-05-22 16:29:27');
+INSERT INTO `admin_operation_log` VALUES (428, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:29:27', '2020-05-22 16:29:27');
+INSERT INTO `admin_operation_log` VALUES (429, 1, 'admin/project', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"page\":\"7\"}', '2020-05-22 16:29:47', '2020-05-22 16:29:47');
+INSERT INTO `admin_operation_log` VALUES (430, 1, 'admin/project/138', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:29:55', '2020-05-22 16:29:55');
+INSERT INTO `admin_operation_log` VALUES (431, 1, 'admin/project', 'GET', '127.0.0.1', '{\"page\":\"7\",\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:29:55', '2020-05-22 16:29:55');
+INSERT INTO `admin_operation_log` VALUES (432, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:29:58', '2020-05-22 16:29:58');
+INSERT INTO `admin_operation_log` VALUES (433, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '[]', '2020-05-22 16:30:55', '2020-05-22 16:30:55');
+INSERT INTO `admin_operation_log` VALUES (434, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\"}', '2020-05-22 16:30:58', '2020-05-22 16:30:58');
+INSERT INTO `admin_operation_log` VALUES (435, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:30:58', '2020-05-22 16:30:58');
+INSERT INTO `admin_operation_log` VALUES (436, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:31:08', '2020-05-22 16:31:08');
+INSERT INTO `admin_operation_log` VALUES (437, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:31:08', '2020-05-22 16:31:08');
+INSERT INTO `admin_operation_log` VALUES (438, 1, 'admin/codeReceivingRecord', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:31:10', '2020-05-22 16:31:10');
+INSERT INTO `admin_operation_log` VALUES (439, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:31:12', '2020-05-22 16:31:12');
+INSERT INTO `admin_operation_log` VALUES (440, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:31:13', '2020-05-22 16:31:13');
+INSERT INTO `admin_operation_log` VALUES (441, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:32:35', '2020-05-22 16:32:35');
+INSERT INTO `admin_operation_log` VALUES (442, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:32:36', '2020-05-22 16:32:36');
+INSERT INTO `admin_operation_log` VALUES (443, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/rechargeDetail\"}', '2020-05-22 16:32:39', '2020-05-22 16:32:39');
+INSERT INTO `admin_operation_log` VALUES (444, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/rechargeDetail\"}', '2020-05-22 16:32:53', '2020-05-22 16:32:53');
+INSERT INTO `admin_operation_log` VALUES (445, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/rechargeDetail\"}', '2020-05-22 16:33:15', '2020-05-22 16:33:15');
+INSERT INTO `admin_operation_log` VALUES (446, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"1\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/rechargeDetail\"}', '2020-05-22 16:33:29', '2020-05-22 16:33:29');
+INSERT INTO `admin_operation_log` VALUES (447, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:33:29', '2020-05-22 16:33:29');
+INSERT INTO `admin_operation_log` VALUES (448, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:33:30', '2020-05-22 16:33:30');
+INSERT INTO `admin_operation_log` VALUES (449, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:35:07', '2020-05-22 16:35:07');
+INSERT INTO `admin_operation_log` VALUES (450, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:35:19', '2020-05-22 16:35:19');
+INSERT INTO `admin_operation_log` VALUES (451, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:35:33', '2020-05-22 16:35:33');
+INSERT INTO `admin_operation_log` VALUES (452, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:35:39', '2020-05-22 16:35:39');
+INSERT INTO `admin_operation_log` VALUES (453, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:36:28', '2020-05-22 16:36:28');
+INSERT INTO `admin_operation_log` VALUES (454, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:36:42', '2020-05-22 16:36:42');
+INSERT INTO `admin_operation_log` VALUES (455, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:37:06', '2020-05-22 16:37:06');
+INSERT INTO `admin_operation_log` VALUES (456, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:37:26', '2020-05-22 16:37:26');
+INSERT INTO `admin_operation_log` VALUES (457, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '[]', '2020-05-22 16:37:42', '2020-05-22 16:37:42');
+INSERT INTO `admin_operation_log` VALUES (458, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:39:16', '2020-05-22 16:39:16');
+INSERT INTO `admin_operation_log` VALUES (459, 1, 'admin/addUserMoneyAction', 'POST', '127.0.0.1', '{\"user_id\":\"4\",\"money\":\"22\",\"_token\":\"fRZvJNsoGqyQ8MctZtHRYCGidtz9D57eybn6B8tp\",\"_previous_\":\"http:\\/\\/message.test:8080\\/admin\\/rechargeDetail\"}', '2020-05-22 16:39:19', '2020-05-22 16:39:19');
+INSERT INTO `admin_operation_log` VALUES (460, 1, 'admin/addUserMoney', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:39:20', '2020-05-22 16:39:20');
+INSERT INTO `admin_operation_log` VALUES (461, 1, 'admin/rechargeDetail', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:39:21', '2020-05-22 16:39:21');
+INSERT INTO `admin_operation_log` VALUES (462, 1, 'admin/user', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-05-22 16:39:25', '2020-05-22 16:39:25');
+INSERT INTO `admin_operation_log` VALUES (463, 1, 'admin', 'GET', '127.0.0.1', '[]', '2020-05-22 16:46:55', '2020-05-22 16:46:55');
 
 -- ----------------------------
 -- Table structure for admin_permission_menu
@@ -344,26 +554,31 @@ INSERT INTO `admin_permission_menu` VALUES (2, 9, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (2, 10, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (2, 11, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (2, 12, NULL, NULL);
+INSERT INTO `admin_permission_menu` VALUES (2, 13, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (3, 8, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (3, 9, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (3, 10, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (3, 11, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (3, 12, NULL, NULL);
+INSERT INTO `admin_permission_menu` VALUES (3, 13, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (4, 8, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (4, 9, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (4, 10, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (4, 11, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (4, 12, NULL, NULL);
+INSERT INTO `admin_permission_menu` VALUES (4, 13, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (5, 8, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (5, 9, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (5, 10, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (5, 11, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (5, 12, NULL, NULL);
+INSERT INTO `admin_permission_menu` VALUES (5, 13, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (6, 8, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (6, 9, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (6, 10, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (6, 11, NULL, NULL);
 INSERT INTO `admin_permission_menu` VALUES (6, 12, NULL, NULL);
+INSERT INTO `admin_permission_menu` VALUES (6, 13, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for admin_permissions
@@ -413,6 +628,7 @@ INSERT INTO `admin_role_menu` VALUES (1, 9, NULL, NULL);
 INSERT INTO `admin_role_menu` VALUES (1, 10, NULL, NULL);
 INSERT INTO `admin_role_menu` VALUES (1, 11, NULL, NULL);
 INSERT INTO `admin_role_menu` VALUES (1, 12, NULL, NULL);
+INSERT INTO `admin_role_menu` VALUES (1, 13, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for admin_role_permissions
@@ -491,6 +707,7 @@ DROP TABLE IF EXISTS `code_receiving_records`;
 CREATE TABLE `code_receiving_records`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `project_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `phone` int(11) NOT NULL COMMENT '接码手机',
   `country_id` int(11) NOT NULL COMMENT '国家id',
   `amount` decimal(8, 2) NOT NULL COMMENT '价格',
@@ -677,7 +894,7 @@ CREATE TABLE `projects`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 138 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 139 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of projects
@@ -832,7 +1049,13 @@ CREATE TABLE `recharge_details`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of recharge_details
+-- ----------------------------
+INSERT INTO `recharge_details` VALUES (1, 1, 4, 1.00, '2020-05-22 16:33:29', '2020-05-22 16:33:29');
+INSERT INTO `recharge_details` VALUES (2, 1, 4, 22.00, '2020-05-22 16:39:19', '2020-05-22 16:39:19');
 
 -- ----------------------------
 -- Table structure for users
@@ -851,12 +1074,11 @@ CREATE TABLE `users`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'aaaaaa', 'a@q.cc', NULL, '$2y$10$tGXyJvJsvxomvXxLXZ9m..Eod5045JxqYznBx6tlZmxVBSfgUWC3S', NULL, NULL, 0.00, '2020-05-13 17:04:29', '2020-05-13 17:04:29');
-INSERT INTO `users` VALUES (2, 'chenkunbest', '6312@qq.cc', NULL, '$2y$10$X37Trlx28/tADSDoznfnBueX3YH7PXqA1ZJqzkk4qRRlsNgDspsWy', '13546555088', NULL, 0.00, '2020-05-15 14:22:01', '2020-05-15 14:22:01');
+INSERT INTO `users` VALUES (4, 'chenkunbest', '631282467@qq.com', NULL, '$2y$10$tYMA7C5CnnTvNv9frclMy.xXPEabuwc5t3D1ES3q975bG5tzQrV.2', '13546555086', NULL, 143.00, '2020-05-22 10:17:30', '2020-05-22 16:39:19');
 
 SET FOREIGN_KEY_CHECKS = 1;
