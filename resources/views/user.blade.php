@@ -79,8 +79,7 @@
                     lay-filter="layadmin-system-side-menu">
                     <li data-name="home" class="layui-nav-item layui-nav-itemed" style="text-align: center">
                         <p>欢迎您！{{ Auth::user()->name }} </p>
-                        <p>余额： 0 元
-                            <button class="layui-btn layui-btn-primary layui-btn-sm">刷新</button>
+                        <p>余额： <span id="refreshCode">{{ $user->money }}</span> 元
                         </p>
                     </li>
 
@@ -182,7 +181,20 @@
         base: '/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use('index');
+    }).use('index', function () {
+        var $ = layui.$;
+
+
+        setInterval(function () {
+            $.ajax({
+                url: '/getUserMoney',
+                dataType: 'json',
+                success: function (data) {
+                    $('#refreshCode').html(data.data);
+                }
+            })
+        }, 3000);
+    });
 </script>
 </body>
 </html>

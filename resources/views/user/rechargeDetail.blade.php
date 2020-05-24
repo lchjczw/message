@@ -47,7 +47,7 @@
 
         table.render({
             elem: '#moneylist'
-            , method: 'post'
+            , method: 'get'
             , url: '/user/rechargeDetailList/'
             , cols: [[
                 {field: 'id', title: '序号'}

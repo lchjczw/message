@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Utils;
+use Exception;
+
 class RequestError extends Exception
 {
     private $responseCode;

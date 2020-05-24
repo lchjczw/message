@@ -4,6 +4,7 @@
 namespace App\Utils;
 
 use App\Utils\RequestError;
+use http\Exception\InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class SMSActivate
@@ -154,16 +155,8 @@ class SMSActivate
             $result = file_get_contents($this->url, false, $context);
         }
 
-        $responsError = new ErrorCodes($result);
-        $check = $responsError->checkExist($result);
-        if ($check) {
-            throw new BadRequestHttpException();
-        }
-
-
         if ($parseAsJSON)
             return json_decode($result, true);
-
 
         $parsedResponse = explode(':', $result);
 
@@ -171,8 +164,13 @@ class SMSActivate
             $returnNumber = array('id' => $parsedResponse[1], 'number' => $parsedResponse[2]);
             return $returnNumber;
         }
+        // 获取验证码转台
         if ($getNumber == 2) {
-            $returnStatus = array('status' => $parsedResponse[0], 'code' => $parsedResponse[1]);
+            if (strpos($result, 'STATUS_OK') === 0) {
+                $returnStatus = array('status' => 1, 'code' => explode(':', $result)[1]);
+                return $returnStatus;
+            }
+            $returnStatus = array('status' => 0, 'code' => $result);
             return $returnStatus;
         }
         if ($getNumber == 3) {

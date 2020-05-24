@@ -128,6 +128,7 @@ return [
     'selected_options'      => '已选中:num个选项',
     'method'                => '方法',
     'user'                  => '用户',
+    'price'                  => '价格',
     'pagination'            => [
         'range' => '从 :first 到 :last ，总共 :total 条',
     ],

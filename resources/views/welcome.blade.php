@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="layui-col-md12">
+        <div class="layui-col-md12" >
             <div class="layui-card">
                 <div class="layui-card-header">接码记录</div>
                 <div class="layui-card-body">

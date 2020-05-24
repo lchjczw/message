@@ -54,7 +54,7 @@
         var $ = layui.$;
         table.render({
             elem: '#prolist'
-            , method: 'post'
+            , method: 'get'
             , url: '/project/getProjectList/'
             , headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -73,7 +73,7 @@
             , id: 'proReload'
         });
 
-        var $ = layui.$, active = {
+        active = {
             reload: function () {
                 var proReload = $('#proReload');
 

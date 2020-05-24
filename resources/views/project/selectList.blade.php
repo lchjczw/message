@@ -30,7 +30,6 @@
         <input class="layui-input" name="protitle" id="proReload" autocomplete="off" placeholder="请输入项目ID或关键词">
     </div>
     <button class="layui-btn layui-btn-normal" data-type="reload">搜索</button>
-    <button class="layui-btn layui-btn-normal" data-type="myreload">我的收藏</button>
 </div>
 <script type="text/html" id="imgnode">
 
@@ -45,7 +44,7 @@
         var $ = layui.$;
         table.render({
             elem: '#prolist'
-            , method: 'post'
+            , method: 'get'
             , url: '/project/getProjectList/'
             , headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -64,7 +63,6 @@
             ]]
             , page: true
             , id: 'proReload'
-
         });
 
         var $ = layui.$, active = {
@@ -78,7 +76,6 @@
                     }
                     , where: {
                         keyword: proReload.val(),
-                        type: 'all'
                     }
                 });
             },
@@ -121,7 +118,7 @@
             if (obj.checked) {
 
                 $(window.parent.document).find('#proname').attr("value", '¥' + obj.data.price + ' / ' + obj.data.number + ' - ' + obj.data.name);
-                $(window.parent.document).find('#proid').attr("value", obj.data.procode);
+                $(window.parent.document).find('#proid').attr("value", obj.data.id);
 
                 if (obj.data.selectC == 'no') {
 

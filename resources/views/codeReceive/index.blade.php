@@ -32,9 +32,6 @@
 <div class="demoTable">
     <blockquote class="layui-elem-quote layui-text notice">系统只保留最近7天之内的数据！请您及时查看对账！</blockquote>
     <div class="layui-input-inline">
-        <input type="text" class="layui-input" id="timeselect" value="" placeholder="">
-    </div>
-    <div class="layui-input-inline">
         <input class="layui-input" name="numbers" id="numbers" placeholder="请输入手机号">
     </div>
     <button class="layui-btn layui-btn-normal" data-type="reload">搜索</button>
@@ -58,22 +55,30 @@
             , skin: 'row'
             , even: true
             , cols: [[
-                {field: 'id', width: '5%', title: '编号'}
+                {field: 'id', title: '编号'}
                 , {
-                    field: 'project', width: '15%', title: '项目名称', templet: function (data) {
+                    field: 'project', title: '项目名称', templet: function (data) {
                         return data.project.name;
                     }
                 }
-                , {field: 'phone', width: '11%', title: ' 手机号码'}
+                , {field: 'phone', title: ' 手机号码'}
                 , {
-                    field: 'country', width: '5%', title: ' 国家', templet: function (data) {
+                    field: 'country', title: ' 国家', templet: function (data) {
                         return data.country.name;
                     }
                 }
-                , {field: 'amount', width: '5%', title: '价格'}
-                , {field: 'content', width: '35%', title: '短信内容'}
-                , {field: 'status', width: '5%', title: '状态'}
-                , {field: 'created_at', width: '14%', title: '时间'}
+                , {field: 'amount', title: '价格'}
+                , {field: 'content', title: '短信内容'}
+                , {
+                    field: 'status', title: '状态', templet: function (data) {
+                        if (data.status == 0) {
+                            return '等待取码';
+                        } else if (data.status == 1) {
+                            return '取码成功';
+                        }
+                    }
+                }
+                , {field: 'created_at', title: '时间'}
 
             ]]
             , page: true
@@ -89,22 +94,9 @@
         });
 
 
-        //日期范围
-        laydate.render({
-            elem: '#timeselect'
-            , range: true
-            , value: '2020-05-22 - 2020-05-22'
-            , min: '2020-04-22'
-            , max: '2020-05-22'
-            , theme: 'molv'
-        });
-
         var $ = layui.$, active = {
             reload: function () {
 
-                var times = $('#timeselect').val().split(' - ');
-                var starttime = times.shift();
-                var endtime = times.pop();
                 var numbers = $('#numbers').val();
 
                 //执行重载
@@ -113,8 +105,6 @@
                         curr: 1 //重新从第 1 页开始
                     }
                     , where: {
-                        starttime: starttime,
-                        endtime: endtime,
                         numbers: numbers
                     }
                 });

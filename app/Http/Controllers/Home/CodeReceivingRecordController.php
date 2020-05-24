@@ -22,15 +22,18 @@ class CodeReceivingRecordController extends Controller
 
     public function alreadyList(Request $request)
     {
+        $number = $request->numbers;
         $limit = $request->limit;
         $page = $request->page - 1;
         $total = DB::table("code_receiving_records")
             ->where('user_id', $request->user()->id)
+            ->where('phone', 'like', $number . '%')
             ->groupBy()
             ->count();
 
         $items = DB::table("code_receiving_records")
             ->where('user_id', $request->user()->id)
+            ->where('phone', 'like', $number . '%')
             ->skip($page * $limit)
             ->take($limit)
             ->get();

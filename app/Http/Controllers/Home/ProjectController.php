@@ -50,4 +50,35 @@ class ProjectController extends Controller
             'count' => $total
         ]);
     }
+
+    public function selectCountryPage()
+    {
+        return view('project.selectCountryPage');
+    }
+
+
+    public function selectCountry(Request $request)
+    {
+        $keyWord = $request->keyword;
+        $limit = $request->limit;
+        $page = $request->page - 1;
+        $total = DB::table("countries")
+            ->where('name', 'like', $keyWord . '%')
+            ->groupBy()
+            ->count();
+
+        $items = DB::table("countries")
+            ->where('name', 'like', $keyWord . '%')
+            ->skip($page * $limit)
+            ->take($limit)
+            ->get();
+
+
+        return response()->json([
+            'code' => 0,
+            'msg' => '获取成功',
+            'data' => $items,
+            'count' => $total
+        ]);
+    }
 }

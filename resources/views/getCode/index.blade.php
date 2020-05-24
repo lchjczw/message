@@ -46,8 +46,7 @@
                     2.多个号同时接码请下载电脑客户端软件 , 大客户合作API请找客服洽谈！多家供应商，折扣力度诱人！<br/>
                     3.部分项目需要使用VPN,同一设备尽量不注册第二个！具体注册技巧请自行网络寻找<br/>
                     4.每个号码最长有效期10分钟,如长时间获取不到验证码,请点击进行释放,然后再获取新号码进行操作<br/>
-                    5.指定号码二次接码时,请输入之前系统给您的完整号码(如: +7747739054 或者 9243777809 )<br/>
-                    6.放弃使用时号码时必须释放或拉黑，避免后台收到验证码短信扣费! 恶意取号拉黑系统自动锁定账户!不予解封!
+                    5.放弃使用时号码时必须释放或拉黑，避免后台收到验证码短信扣费! 恶意取号拉黑系统自动锁定账户!不予解封!
                 </div>
             </div>
         </div>
@@ -81,8 +80,7 @@
         </div>
         <input class="layui-btn layui-btn-normal submit" id="selectnumnode" lay-submit="" readonly
                lay-filter="selectnum" value="获取新号码" style="width:110px;">
-        <input class="layui-btn submit" id="selectednumnode" lay-submit="" readonly lay-filter="selectednum"
-               value="获取指定号" style="width:110px;">
+
     </div>
     <div class="list-item">
         <input class="layui-btn layui-btn-danger submit" readonly lay-submit="" lay-filter="againgetsms"
@@ -150,7 +148,7 @@
                 type: 2,
                 title: '国家列表',
                 area: ['80%', '90%'],
-                content: '/index/project/countryInc/',
+                content: '/selectCountryPage/',
                 btn: ['确定'],
                 yes: function (index, layero) {
 
@@ -178,7 +176,7 @@
 
                 $.ajax({
                     url: '/releaseNumber/',
-                    type: 'post',
+                    type: 'get',
                     data: 'orderid=' + lastorder,
                     success: function (msg) {
 
@@ -217,8 +215,8 @@
 
             $.ajax({
                 url: '/getNumber/',
-                type: 'post',
-                data: 'procode=' + proid + '&domain=' + domain,
+                type: 'get',
+                data: 'projectId=' + proid + '&countryId=' + domain,
                 success: function (msg) {
                     if (msg.code == 0) {
                         layer.alert(msg.msg);
@@ -231,10 +229,8 @@
 
                         layer.msg(msg.msg);
 
-                        $('#number').val(msg.data[0].phoneNumber);
-                        $('#orderid').val(msg.data[0].orderid);
-                        $('#orderids').val(msg.data[0].orderid);
-
+                        $('#number').val(msg.data.number);
+                        $('#orderid').val(msg.data.id);
                         getsms();
 
                     }
@@ -262,7 +258,7 @@
 
                 $.ajax({
                     url: '/releaseNumber/',
-                    type: 'post',
+                    type: 'get',
                     data: 'orderid=' + lastorder,
                     success: function (msg) {
 
@@ -311,7 +307,7 @@
 
             $.ajax({
                 url: '/getNumber/',
-                type: 'post',
+                type: 'get',
                 data: 'procode=' + proid + '&domain=' + domain + '&number=' + phoneNumber,
                 success: function (msg) {
                     if (msg.code == 0) {
@@ -390,25 +386,22 @@
                 $.ajax({
                     url: '/getSmsContent/',
                     data: 'orderid=' + orderid,
-                    type: 'post',
+                    type: 'get',
                     success: function (msg) {
 
                         if (msg.code == 1) {
 
-                            var str = '<tr><td>' + msg.data[0].times + '</td><td>' + msg.data[0].messages + '</td></tr>';
+                            var str = '<tr><td>' + msg.data.times + '</td><td>' + msg.data.messages + '</td></tr>';
                             playSound();
                             $('#smscontent').append(str);
 
                             stopGet();
                             lockBtn('unlock');
 
-                        } else if (msg.code > 200) {
-
-                            stopGet();
+                        } else if (msg.code == 0) {
+                            // stopGet();
                             lockBtn('unlock');
-
-                            layer.alert(msg.msg);
-
+                            layer.msg(msg.msg);
                         }
 
                     },
@@ -432,7 +425,7 @@
 
                     $.ajax({
                         url: '/releaseNumber/',
-                        type: 'post',
+                        type: 'get',
                         data: 'orderid=' + orderid,
                         success: function (msg) {
 
@@ -479,7 +472,7 @@
 
             $.ajax({
                 url: '/releaseNumber/',
-                type: 'post',
+                type: 'get',
                 data: 'orderid=' + orderid,
                 success: function (msg) {
 
@@ -506,7 +499,7 @@
 
             $.ajax({
                 url: '/shieldNumber/',
-                type: 'post',
+                type: 'get',
                 data: 'orderid=' + orderid,
                 success: function (msg) {
 

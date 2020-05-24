@@ -38,11 +38,11 @@
             @else
 
                 <li class="layui-nav-item ">
-                    <a href="/auth/showLoginForm">登录 </a>
+                    <a href="/login">登录 </a>
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a href="/auth/showRegistrationForm">注册 </a>
+                    <a href="/register">注册 </a>
                 </li>
             @endif
         </ul>

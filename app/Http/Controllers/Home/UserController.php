@@ -12,9 +12,11 @@ class UserController extends Controller
     //
 
     // 用户首页
-    public function index()
+    public function index(Request $request)
     {
-        return view('user');
+        $user = User::find($request->user()->id);
+
+        return view('user', compact('user'));
     }
 
     public function edit(Request $request)
@@ -44,8 +46,8 @@ class UserController extends Controller
 
     public function rechargeDetail(Request $request)
     {
-        $sum = DB::table('recharge_details')->where('user_id',$request->user()->id)->sum('amount');
-        return view('user/rechargeDetail',compact('sum'));
+        $sum = DB::table('recharge_details')->where('user_id', $request->user()->id)->sum('amount');
+        return view('user/rechargeDetail', compact('sum'));
     }
 
     public function rechargeDetailList(Request $request)
@@ -68,6 +70,16 @@ class UserController extends Controller
             'msg' => '获取成功',
             'data' => $items,
             'count' => $total
+        ]);
+    }
+
+
+    public function getUserMoney(Request $request)
+    {
+        return response()->json([
+            'code' => 0,
+            'msg' => '获取成功',
+            'data' => User::find($request->user()->id)->money
         ]);
     }
 }
