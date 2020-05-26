@@ -25,11 +25,11 @@ class HomeController extends Controller
     {
         $user = User::find($request->user()->id);
 
-        $todaySum = DB::table('code_receiving_records')->where('created_at', '>', date('Y-m-d', time()))->sum('id');
+        $todaySum = DB::table('code_receiving_records')->where('created_at', '>', date('Y-m-d', time()))->sum('amount');
 
-        $monthSum = DB::table('code_receiving_records')->where('created_at', '>', date('Y-m-01', time()))->sum('id');
+        $monthSum = DB::table('code_receiving_records')->where('created_at', '>', date('Y-m-01', time()))->sum('amount');
 
-        $allSum = DB::table('code_receiving_records')->sum('id');
+        $allSum = DB::table('code_receiving_records')->sum('amount');
         return view('welcome', compact('user', 'todaySum', 'monthSum', 'allSum'));
     }
 
