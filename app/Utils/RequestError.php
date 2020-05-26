@@ -7,7 +7,7 @@ class RequestError extends Exception
 {
     private $responseCode;
     protected $errorCodes = array(
-        'NO_NUMBERS' => '没有空余号码接收当前服务的短信',
+        'NO_NUMBERS' => '没有空余号码接收当前服务的簡訊',
         'NO_BALANCE' => 'Закончился баланс',
         'BAD_ACTION' => '无效的动作（动作参数）',
         'BAD_SERVICE' => '服务名称无效（服务参数）',

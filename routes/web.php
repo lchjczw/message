@@ -44,7 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/project/index', 'Home\ProjectController@index');
 
-    // 已接短信
+    // 已接簡訊
     Route::get('/codeReceive/index', 'Home\CodeReceivingRecordController@index');
     Route::post('/codeReceive/alreadyList', 'Home\CodeReceivingRecordController@alreadyList');
 

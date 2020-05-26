@@ -19,7 +19,7 @@ class CreateCodeReceivingRecordsTable extends Migration
             $table->integer('phone')->comment('手机');
             $table->integer('country_id')->comment('国家id');
             $table->decimal('amount', 8, 2)->comment('价格');
-            $table->string('content')->comment('短信内容');
+            $table->string('content')->comment('簡訊内容');
             $table->tinyInteger('status')->comment('状态');
             $table->timestamps();
         });

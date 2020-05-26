@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>奧利給 - 短信聚合平臺</title>
-    <meta name="keywords" content="短信聚合平臺">
+    <title>奧利給 - 簡訊聚合平臺</title>
+    <meta name="keywords" content="簡訊聚合平臺">
     <meta name="description"
-          content="短信聚合平臺">
+          content="簡訊聚合平臺">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -62,8 +62,8 @@
             <i class="layui-icon" style="color: #fff; color: rgba(255,255,255,.7);">&#xe609;</i>
         </div>
         <div class="layui-anim site-desc">
-            <p class="web-font-desc">奧利給 - 短信聚合平臺</p>
-            <cite>短信聚合解决方案</cite>
+            <p class="web-font-desc">奧利給 - 簡訊聚合平臺</p>
+            <cite>簡訊聚合解决方案</cite>
         </div>
         <div class="site-download">
             <a href="/auth/login" class="layui-inline site-down"
@@ -82,19 +82,19 @@
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>返璞歸真</legend>
-                <p>身處在信息的繁榮之下，我們都在有意或無意地追逐。而 奧利給短信平臺 偏偏回望當初，奔赴在返璞歸真的漫漫征途，自信並勇敢著，追尋於原生態的書寫指令，試圖以最簡單的方式詮釋高效。</p>
+                <p>身處在信息的繁榮之下，我們都在有意或無意地追逐。而 奧利給簡訊平臺 偏偏回望當初，奔赴在返璞歸真的漫漫征途，自信並勇敢著，追尋於原生態的書寫指令，試圖以最簡單的方式詮釋高效。</p>
             </fieldset>
         </li>
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>雙面體驗</legend>
-                <p>擁有雙面的不僅是人生，還有 奧利給短信聚合平臺。壹面極簡，壹面豐盈。極簡是視覺所見的外在，是開發所念的簡易。豐盈是傾情雕琢的內在，是信手拈來的承諾。壹切本應如此，簡而全，雙重體驗。</p>
+                <p>擁有雙面的不僅是人生，還有 奧利給簡訊聚合平臺。壹面極簡，壹面豐盈。極簡是視覺所見的外在，是開發所念的簡易。豐盈是傾情雕琢的內在，是信手拈來的承諾。壹切本應如此，簡而全，雙重體驗。</p>
             </fieldset>
         </li>
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>星辰大海</legend>
-                <p>如果眼下還是壹團零星之火，那運籌帷幄之後，迎面東風，就是壹場烈焰燎原吧，那必定會是壹番盡情的燃燒。待，秋風蕭瑟時，散作滿天星辰，妳看那四季輪回<!--海天相接--> ，正是 奧利給短信聚合平臺
+                <p>如果眼下還是壹團零星之火，那運籌帷幄之後，迎面東風，就是壹場烈焰燎原吧，那必定會是壹番盡情的燃燒。待，秋風蕭瑟時，散作滿天星辰，妳看那四季輪回<!--海天相接--> ，正是 奧利給簡訊聚合平臺
                     不滅的執念。</p>
             </fieldset>
         </li>

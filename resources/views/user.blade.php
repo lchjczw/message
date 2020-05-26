@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>奥利给短信聚合平台</title>
+    <title>簡訊聚合平台</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -71,7 +71,7 @@
         <div class="layui-side layui-side-menu">
             <div class="layui-side-scroll">
                 <div class="layui-logo" lay-href="home/console.html">
-                    <span>短信聚合平臺</span>
+                    <span>簡訊聚合平臺</span>
                 </div>
 
 
@@ -117,10 +117,10 @@
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/codeReceive/index" lay-tips="已接短信"
+                        <a href="javascript:;" lay-href="/codeReceive/index" lay-tips="已接簡訊"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-component"></i>
-                            <cite>已接短信</cite>
+                            <cite>已接簡訊</cite>
                         </a>
                     </li>
 

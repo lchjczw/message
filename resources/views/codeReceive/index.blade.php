@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>短信记录</title>
+    <title>簡訊记录</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -68,7 +68,7 @@
                     }
                 }
                 , {field: 'amount', title: '价格'}
-                , {field: 'content', title: '短信内容'}
+                , {field: 'content', title: '簡訊内容'}
                 , {
                     field: 'status', title: '状态', templet: function (data) {
                         if (data.status == 0) {

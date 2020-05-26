@@ -711,7 +711,7 @@ CREATE TABLE `code_receiving_records`  (
   `phone` int(11) NOT NULL COMMENT '手机',
   `country_id` int(11) NOT NULL COMMENT '国家id',
   `amount` decimal(8, 2) NOT NULL COMMENT '价格',
-  `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '短信内容',
+  `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '簡訊内容',
   `status` tinyint(4) NOT NULL COMMENT '状态',
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,

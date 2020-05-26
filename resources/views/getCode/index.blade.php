@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>获取短信</title>
+    <title>获取簡訊</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -46,7 +46,7 @@
                     2.多个号同时请下载电脑客户端软件 , 大客户合作API请找客服洽谈！多家供应商，折扣力度诱人！<br/>
                     3.部分项目需要使用VPN,同一设备尽量不注册第二个！具体注册技巧请自行网络寻找<br/>
                     4.每个号码最长有效期10分钟,如长时间获取不到验证码,请点击进行释放,然后再获取新号码进行操作<br/>
-                    5.放弃使用时号码时必须释放或拉黑，避免后台收到验证码短信扣费! 恶意取号拉黑系统自动锁定账户!不予解封!
+                    5.放弃使用时号码时必须释放或拉黑，避免后台收到验证码簡訊扣费! 恶意取号拉黑系统自动锁定账户!不予解封!
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
     </div>
     <div class="list-item">
         <input class="layui-btn layui-btn-danger submit" readonly lay-submit="" lay-filter="againgetsms"
-               id="getcontentmsg" value="准备获取短信内容...">
+               id="getcontentmsg" value="准备获取簡訊内容...">
         <input class="layui-btn layui-btn-normal submit" readonly lay-submit="" lay-filter="releasember" value="释放手机号">
         <input class="layui-btn layui-btn-normal submit" readonly lay-submit="" lay-filter="deletebymber" value="拉黑手机号">
     </div>
@@ -99,7 +99,7 @@
                 <thead>
                 <tr>
                     <th>时间</th>
-                    <th>短信内容</th>
+                    <th>簡訊内容</th>
                 </tr>
                 </thead>
                 <tbody id="smscontent">
@@ -347,7 +347,7 @@
 
             clearInterval(getSmsTask);
             $('#getcontentmsg').css('display', 'none');
-            $('#getcontentmsg').val('准备获取短信内容...');
+            $('#getcontentmsg').val('准备获取簡訊内容...');
 
         }
 
@@ -381,7 +381,7 @@
 
             getSmsTask = setInterval(function () {
 
-                $('#getcontentmsg').val('剩余 ' + i + ' 次获取短信...');
+                $('#getcontentmsg').val('剩余 ' + i + ' 次获取簡訊...');
 
                 $.ajax({
                     url: '/getSmsContent/',
@@ -421,7 +421,7 @@
                     stopGet();
                     lockBtn('unlock');
 
-                    layer.msg('获取短信内容超时！请重新获取号码！');
+                    layer.msg('获取簡訊内容超时！请重新获取号码！');
 
                     $.ajax({
                         url: '/releaseNumber/',

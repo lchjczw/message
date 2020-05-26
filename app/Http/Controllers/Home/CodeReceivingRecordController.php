@@ -13,7 +13,7 @@ class CodeReceivingRecordController extends Controller
     //
 
     /**
-     * 已接短信
+     * 已接簡訊
      */
     public function index()
     {
