@@ -30,17 +30,16 @@
         <div class="layui-form component" lay-filter="LAY-site-header-component"></div>
         <ul class="layui-nav">
             <li class="layui-nav-item ">
-                <a href="/">首页 </a>
+                <a href="/">首頁 </a>
             </li>
 
             <li class="layui-nav-item ">
-                <a href="/auth/showLoginForm">登录 </a>
+                <a href="/login">登錄 </a>
             </li>
 
             <li class="layui-nav-item ">
-                <a href="/auth/showRegistrationForm">注册 </a>
+                <a href="/register">註冊 </a>
             </li>
-
         </ul>
     </div>
 </div>

@@ -16,7 +16,7 @@ class CreateCodeReceivingRecordsTable extends Migration
         Schema::create('code_receiving_records', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id');
-            $table->integer('phone')->comment('接码手机');
+            $table->integer('phone')->comment('手机');
             $table->integer('country_id')->comment('国家id');
             $table->decimal('amount', 8, 2)->comment('价格');
             $table->string('content')->comment('短信内容');

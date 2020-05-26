@@ -71,48 +71,48 @@
         <div class="layui-side layui-side-menu">
             <div class="layui-side-scroll">
                 <div class="layui-logo" lay-href="home/console.html">
-                    <span>短信聚合平台</span>
+                    <span>短信聚合平臺</span>
                 </div>
 
 
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
                     lay-filter="layadmin-system-side-menu">
                     <li data-name="home" class="layui-nav-item layui-nav-itemed" style="text-align: center">
-                        <p>欢迎您！{{ Auth::user()->name }} </p>
-                        <p>余额： <span id="refreshCode">{{ $user->money }}</span> 元
+                        <p>歡迎您！{{ Auth::user()->name }} </p>
+                        <p>余額： <span id="refreshCode">{{ $user->money }}</span> 元
                         </p>
                     </li>
 
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/getCode/index" lay-tips="在线取码"
+                        <a href="javascript:;" lay-href="/getCode/index" lay-tips="在線取碼"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-heart-fill"></i>
-                            <cite>在线取码</cite>
+                            <cite>在線取碼</cite>
                         </a>
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/project/index" lay-tips="项目列表"
+                        <a href="javascript:;" lay-href="/project/index" lay-tips="項目列表"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-template"></i>
-                            <cite>项目列表</cite>
+                            <cite>項目列表</cite>
                         </a>
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/user/recharge" lay-tips="账户充值"
+                        <a href="javascript:;" lay-href="/user/recharge" lay-tips="賬戶充值"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-rmb"></i>
-                            <cite>账户充值</cite>
+                            <cite>賬戶充值</cite>
                         </a>
                     </li>
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/user/rechargeDetail" lay-tips="充值明细"
+                        <a href="javascript:;" lay-href="/user/rechargeDetail" lay-tips="充值明細"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-diamond"></i>
-                            <cite>充值明细</cite>
+                            <cite>充值明細</cite>
                         </a>
                     </li>
 
@@ -126,10 +126,10 @@
 
 
                     <li data-name="get" class="layui-nav-item">
-                        <a href="javascript:;" lay-href="/user/edit" lay-tips="个人信息"
+                        <a href="javascript:;" lay-href="/user/edit" lay-tips="個人信息"
                            lay-direction="2">
                             <i class="layui-icon layui-icon-friends"></i>
-                            <cite>个人信息</cite>
+                            <cite>個人信息</cite>
                         </a>
                     </li>
 
@@ -147,9 +147,9 @@
                     <li class="layui-nav-item" lay-unselect>
                         <a href="javascript:;"></a>
                         <dl class="layui-nav-child layui-anim-fadein">
-                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
-                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
-                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">關閉當前標簽頁</a></dd>
+                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">關閉其它標簽頁</a></dd>
+                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">關閉全部標簽頁</a></dd>
                         </dl>
                     </li>
                 </ul>

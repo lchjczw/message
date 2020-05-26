@@ -10,7 +10,7 @@ use Dcat\Admin\Controllers\AdminController;
 
 class CodeReceivingRecordController extends AdminController
 {
-    protected  $title='接码记录';
+    protected  $title='记录';
     /**
      * Make a grid builder.
      *

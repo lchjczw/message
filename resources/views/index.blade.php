@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>奥利给 - 短信聚合平台</title>
-    <meta name="keywords" content="短信聚合平台">
+    <title>奧利給 - 短信聚合平臺</title>
+    <meta name="keywords" content="短信聚合平臺">
     <meta name="description"
-          content="短信聚合平台">
+          content="短信聚合平臺">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -27,7 +27,7 @@
         <div class="layui-form component" lay-filter="LAY-site-header-component"></div>
         <ul class="layui-nav">
             <li class="layui-nav-item ">
-                <a href="/">首页 </a>
+                <a href="/">首頁 </a>
             </li>
             @if (Auth::check())
                 <li class="layui-nav-item">
@@ -38,11 +38,11 @@
             @else
 
                 <li class="layui-nav-item ">
-                    <a href="/login">登录 </a>
+                    <a href="/login">登錄 </a>
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a href="/register">注册 </a>
+                    <a href="/register">註冊 </a>
                 </li>
             @endif
         </ul>
@@ -62,14 +62,14 @@
             <i class="layui-icon" style="color: #fff; color: rgba(255,255,255,.7);">&#xe609;</i>
         </div>
         <div class="layui-anim site-desc">
-            <p class="web-font-desc">奥利给 - 短信聚合平台</p>
+            <p class="web-font-desc">奧利給 - 短信聚合平臺</p>
             <cite>短信聚合解决方案</cite>
         </div>
         <div class="site-download">
             <a href="/auth/login" class="layui-inline site-down"
                target="_blank">
                 <cite class="layui-icon">&#xe658;</cite>
-                立即注册
+                立即註冊
             </a>
         </div>
 
@@ -81,21 +81,21 @@
     <ul class="site-idea">
         <li>
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>返璞归真</legend>
-                <p>身处在信息的繁荣之下，我们都在有意或无意地追逐。而 奥利给短信平台 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                <legend>返璞歸真</legend>
+                <p>身處在信息的繁榮之下，我們都在有意或無意地追逐。而 奧利給短信平臺 偏偏回望當初，奔赴在返璞歸真的漫漫征途，自信並勇敢著，追尋於原生態的書寫指令，試圖以最簡單的方式詮釋高效。</p>
             </fieldset>
         </li>
         <li>
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>双面体验</legend>
-                <p>拥有双面的不仅是人生，还有 奥利给短信聚合平台。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
+                <legend>雙面體驗</legend>
+                <p>擁有雙面的不僅是人生，還有 奧利給短信聚合平臺。壹面極簡，壹面豐盈。極簡是視覺所見的外在，是開發所念的簡易。豐盈是傾情雕琢的內在，是信手拈來的承諾。壹切本應如此，簡而全，雙重體驗。</p>
             </fieldset>
         </li>
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>星辰大海</legend>
-                <p>如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场烈焰燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回<!--海天相接--> ，正是 奥利给短信聚合平台
-                    不灭的执念。</p>
+                <p>如果眼下還是壹團零星之火，那運籌帷幄之後，迎面東風，就是壹場烈焰燎原吧，那必定會是壹番盡情的燃燒。待，秋風蕭瑟時，散作滿天星辰，妳看那四季輪回<!--海天相接--> ，正是 奧利給短信聚合平臺
+                    不滅的執念。</p>
             </fieldset>
         </li>
     </ul>

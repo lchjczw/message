@@ -19,7 +19,7 @@
             <div class="layui-card">
                 <div class="layui-card-header">
                     我的余额
-                    <span class="layui-badge layui-bg-blue layuiadmin-badge">￥</span>
+                    <span class="layui-badge layui-bg-blue layuiadmin-badge"></span>
                 </div>
                 <div class="layui-card-body layuiadmin-card-list">
                     <p class="layuiadmin-big-font">{{$user->money}}</p>
@@ -29,7 +29,7 @@
         <div class="layui-col-sm6 layui-col-md3">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    今日接码
+                    今日
                     <span class="layui-badge layui-bg-cyan layuiadmin-badge">日</span>
                 </div>
                 <div class="layui-card-body layuiadmin-card-list">
@@ -40,7 +40,7 @@
         <div class="layui-col-sm6 layui-col-md3">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    本月接码
+                    本月
                     <span class="layui-badge layui-bg-green layuiadmin-badge">月</span>
                 </div>
                 <div class="layui-card-body layuiadmin-card-list">
@@ -52,7 +52,7 @@
         <div class="layui-col-sm6 layui-col-md3">
             <div class="layui-card">
                 <div class="layui-card-header">
-                    总接码数
+                    总数
                     <span class="layui-badge layui-bg-orange layuiadmin-badge">总</span>
                 </div>
                 <div class="layui-card-body layuiadmin-card-list">
@@ -65,7 +65,7 @@
 
         <div class="layui-col-md12" >
             <div class="layui-card">
-                <div class="layui-card-header">接码记录</div>
+                <div class="layui-card-header">记录</div>
                 <div class="layui-card-body">
                     <iframe src="/codeReceive/index" width="100%" height="600px" frameborder="0"></iframe>
 

@@ -16,7 +16,7 @@ return [
         'user_id'                => '用户',
         'project_id'                => '项目',
         'country_id'                => '国家',
-        'content'                => '接码内容',
+        'content'                => '内容',
         'status'                => '状态',
         'created_at'            => '创建时间',
         'updated_at'            => '更新时间',

@@ -84,16 +84,21 @@ class GetCodeController extends Controller
                 ]
             ]);
         } else {
-            $codeReceive->update([
-                'content' => $data['code'],
-                'status' => 1
-            ]);
 
-            $user = User::find($request->user()->id);
-            $project = Project::find($codeReceive->project_id);
-            $user->update([
-                'money' => $user->money - $project->price
-            ]);
+            if ($codeReceive->status != 1) {
+                
+                $codeReceive->update([
+                    'content' => $data['code'],
+                    'status' => 1
+                ]);
+
+                $user = User::find($request->user()->id);
+                $project = Project::find($codeReceive->project_id);
+                $user->update([
+                    'money' => $user->money - $project->price
+                ]);
+            }
+
             return response()->json([
                 'code' => 1,
                 'msg' => '获取成功',

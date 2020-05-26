@@ -43,7 +43,7 @@
                 <div class="layui-card-header">请新手们注意仔细阅读（大牛请忽略）</div>
                 <div class="layui-card-body">
                     1.平台无中国大陆号码!!! 不做腾讯、阿里、银行、政府、金融、违法、违规等相关项目！<br/>
-                    2.多个号同时接码请下载电脑客户端软件 , 大客户合作API请找客服洽谈！多家供应商，折扣力度诱人！<br/>
+                    2.多个号同时请下载电脑客户端软件 , 大客户合作API请找客服洽谈！多家供应商，折扣力度诱人！<br/>
                     3.部分项目需要使用VPN,同一设备尽量不注册第二个！具体注册技巧请自行网络寻找<br/>
                     4.每个号码最长有效期10分钟,如长时间获取不到验证码,请点击进行释放,然后再获取新号码进行操作<br/>
                     5.放弃使用时号码时必须释放或拉黑，避免后台收到验证码短信扣费! 恶意取号拉黑系统自动锁定账户!不予解封!
@@ -54,7 +54,7 @@
 </div>
 <form class="layui-form layui-form-pane" action="">
     <div class="list-item">
-        <label class="layui-form-label">接码项目</label>
+        <label class="layui-form-label">项目</label>
         <div class="layui-input-inline">
             <input type="text" id="proname" value="" placeholder="请点击右侧按钮选择" disabled class="layui-input">
             <input type="hidden" id="proid" value="">
@@ -63,7 +63,7 @@
                style="width:234px;">
     </div>
     <div class="list-item attach">
-        <label class="layui-form-label">接码国家</label>
+        <label class="layui-form-label">国家</label>
         <div class="layui-input-inline">
             <input type="text" id="country" value="" placeholder="必选项" disabled class="layui-input">
             <input type="hidden" id="domain" value="">

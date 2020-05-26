@@ -47,7 +47,7 @@ INSERT INTO `admin_menu` VALUES (8, 0, 2, '国家管理', 'fa-adjust', 'countrie
 INSERT INTO `admin_menu` VALUES (9, 0, 3, '项目管理', 'fa-amazon', 'project', '2020-05-15 16:05:36', '2020-05-22 15:54:24');
 INSERT INTO `admin_menu` VALUES (10, 0, 4, '用户管理', 'fa-user-circle', 'user', '2020-05-15 16:17:20', '2020-05-22 15:54:24');
 INSERT INTO `admin_menu` VALUES (11, 0, 6, '充值明细', 'fa-apple', 'rechargeDetail', '2020-05-15 16:23:14', '2020-05-22 15:57:05');
-INSERT INTO `admin_menu` VALUES (12, 0, 7, '接码记录', 'fa-bars', 'codeReceivingRecord', '2020-05-15 16:27:38', '2020-05-22 15:57:05');
+INSERT INTO `admin_menu` VALUES (12, 0, 7, '记录', 'fa-bars', 'codeReceivingRecord', '2020-05-15 16:27:38', '2020-05-22 15:57:05');
 INSERT INTO `admin_menu` VALUES (13, 0, 5, '充值', 'fa-500px', 'addUserMoney', '2020-05-22 15:57:00', '2020-05-22 15:57:05');
 
 -- ----------------------------
@@ -708,7 +708,7 @@ CREATE TABLE `code_receiving_records`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `project_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `phone` int(11) NOT NULL COMMENT '接码手机',
+  `phone` int(11) NOT NULL COMMENT '手机',
   `country_id` int(11) NOT NULL COMMENT '国家id',
   `amount` decimal(8, 2) NOT NULL COMMENT '价格',
   `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '短信内容',

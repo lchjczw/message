@@ -68,14 +68,14 @@
 <div class="layui-fuild">
 
     <div class="layui-card">
-        <div class="layui-card-header">个人信息</div>
+        <div class="layui-card-header">個人信息</div>
         <div class="layui-card-body">
             <form class="layui-form layui-form-pane" action="">
-                <blockquote class="layui-elem-quote layui-text notice">为了您的账户安全 , 请一定正确填写资料！找回账户等重要操作时平台会核验！
+                <blockquote class="layui-elem-quote layui-text notice">為了您的賬戶安全 , 請壹定正確填寫資料！找回賬戶等重要操作時平臺會核驗！
                 </blockquote>
                 <div class="user_left">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">用户昵称</label>
+                        <label class="layui-form-label">用戶昵稱</label>
                         <div class="layui-input-inline">
                             <input type="text" value="{{ $user->name }}" name="username" id="username" disabled
                                    class="layui-input"
@@ -83,21 +83,21 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">帐户余额</label>
+                        <label class="layui-form-label">帳戶余額</label>
                         <div class="layui-input-inline">
                             <input type="text" value="{{$user->money}}" disabled class="layui-input">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">邮箱</label>
+                        <label class="layui-form-label">郵箱</label>
                         <div class="layui-input-inline">
                             <input type="text" id="alipay" name="alipay" value="{{ $user->email }}" disabled
                                    class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">手机号码</label>
+                        <label class="layui-form-label">手機號碼</label>
                         <div class="layui-input-inline">
                             <input type="text" id="phone" name="phone" autocomplete="off" value="{{ $user->phone }}"
                                    disabled
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">新密码</label>
+                        <label class="layui-form-label">新密碼</label>
                         <div class="layui-input-inline">
                             <input type="password" id="password" name="password" autocomplete="off" value=""
                                    class="layui-input" lay-verify="required">
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">重复输入新密码</label>
+                        <label class="layui-form-label">重復輸入新密碼</label>
                         <div class="layui-input-inline">
                             <input type="password" id="rpassword" name="rpassword" autocomplete="off" value=""
                                    class="layui-input" lay-verify="required">
@@ -149,7 +149,7 @@
             console.log(obj);
 
             if (obj.field.password != obj.field.rpassword) {
-                layer.msg('两次输入的密码不一致');
+                layer.msg('兩次輸入的密碼不壹致');
                 return false;
             }
 
