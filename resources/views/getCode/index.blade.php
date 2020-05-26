@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
-<div id="main">
+<!--<div id="main">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <form class="layui-form layui-form-pane" action="">
     <div class="list-item">
         <label class="layui-form-label">项目</label>

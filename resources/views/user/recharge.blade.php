@@ -49,7 +49,7 @@
 </head>
 <body>
 <form class="layui-form layui-form-pane" action="">
-    <div style="padding: 10px; background-color: #F2F2F2;color:#ff0000;">
+    <!--<div style="padding: 10px; background-color: #F2F2F2;color:#ff0000;">
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="paymain">
         <div class="layui-form-item">
             <label class="layui-form-label">ID</label>
