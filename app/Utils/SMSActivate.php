@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class SMSActivate
 {
-    private $url = 'http://43.239.159.124/stubs/handler_api.php';
+    private $url = 'https://sms-activate.ru/stubs/handler_api.php';
     private $apiKey;
 
     protected static $instance;
