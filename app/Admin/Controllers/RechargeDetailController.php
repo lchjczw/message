@@ -25,10 +25,20 @@ class RechargeDetailController extends AdminController
         return Grid::make(new RechargeDetail(), function (Grid $grid) {
             $grid->id->sortable();
             $grid->column('admin_user_id')->display(function ($admin_user_id) {
-                return Administrator::find($admin_user_id)->username;
+                $admin = Administrator::find($admin_user_id);
+                if ($admin) {
+                    return $admin->username;
+                } else {
+                    return "无此用户";
+                }
             });
             $grid->column('user_id')->display(function ($user_id) {
-                return User::find($user_id)->name;
+                $user = User::find($user_id);
+                if ($user) {
+                    return $user->name;
+                } else {
+                    return "无此用户";
+                }
             });
             $grid->amount;
             $grid->created_at;
