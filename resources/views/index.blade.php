@@ -21,8 +21,8 @@
 
 <div class="layui-header header header-index" summer>
     <div class="layui-main">
-        <a class="logo" href="/">
-            <img src="https://dss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1947393160.jpg" alt="layui">
+        <a class="logo" href="/" style="color:#fff; line-height: 25px">
+            簡訊聚合平臺
         </a>
         <div class="layui-form component" lay-filter="LAY-site-header-component"></div>
         <ul class="layui-nav">
@@ -62,7 +62,7 @@
             <i class="layui-icon" style="color: #fff; color: rgba(255,255,255,.7);">&#xe609;</i>
         </div>
         <div class="layui-anim site-desc">
-            <p class="web-font-desc">奧利給 - 簡訊聚合平臺</p>
+            <p class="web-font-desc">簡訊聚合平臺</p>
             <cite>簡訊聚合解决方案</cite>
         </div>
         <div class="site-download">
@@ -77,8 +77,11 @@
 </div>
 <div class="layui-main">
 
+    <p style="text-align: center;margin-top: 20px;">
+        <img src="/p.jpg" alt="">
+    </p>
 
-    <ul class="site-idea">
+    <!--<ul class="site-idea">
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>返璞歸真</legend>
@@ -94,11 +97,11 @@
         <li>
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>星辰大海</legend>
-                <p>如果眼下還是壹團零星之火，那運籌帷幄之後，迎面東風，就是壹場烈焰燎原吧，那必定會是壹番盡情的燃燒。待，秋風蕭瑟時，散作滿天星辰，妳看那四季輪回<!--海天相接--> ，正是 奧利給簡訊聚合平臺
+                <p>如果眼下還是壹團零星之火，那運籌帷幄之後，迎面東風，就是壹場烈焰燎原吧，那必定會是壹番盡情的燃燒。待，秋風蕭瑟時，散作滿天星辰，妳看那四季輪回，正是 奧利給簡訊聚合平臺
                     不滅的執念。</p>
             </fieldset>
         </li>
-    </ul>
+    </ul> -->
 </div>
 <div class="layui-footer footer footer-index">
     <div class="layui-main">
@@ -122,7 +125,7 @@
     layui.config({
         base: '/layui/lay/modules/'
         , version: '1586046995289'
-    }).use('global');
+    });
 </script>
 
 

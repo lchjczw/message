@@ -7,7 +7,7 @@ use App\Utils\RequestError;
 use http\Exception\InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
-class SMSActivate
+class SMSActivate implements GetCodeInterface
 {
     private $url = 'https://sms-activate.ru/stubs/handler_api.php';
     private $apiKey;
