@@ -34,6 +34,7 @@ class ProjectController extends AdminController
             $grid->number;
             $grid->name;
             $grid->price;
+            $grid->description;
             $grid->created_at;
             $grid->updated_at->sortable();
 
@@ -58,6 +59,8 @@ class ProjectController extends AdminController
             $show->icon;
             $show->number;
             $show->name;
+            $show->price;
+            $show->description;
             $show->created_at;
             $show->updated_at;
         });
@@ -76,6 +79,7 @@ class ProjectController extends AdminController
             $form->text('number','编号')->rules('required');
             $form->text('name','项目名称')->rules('required');
             $form->decimal('price','金额')->rules('required');
+            $form->textarea('description','描述');
             $form->display('created_at');
             $form->display('updated_at');
         });

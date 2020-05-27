@@ -62,6 +62,11 @@
         <input class="layui-btn layui-btn-normal submit" lay-submit="" readonly lay-filter="selectpro" value="选择项目"
                style="width:234px;">
     </div>
+    <div class="layui-card" style="width: 800px" id="showRemark">
+        <div class="layui-card-header">项目描述</div>
+        <div class="layui-card-body" id="projectRemark">暂无</div>
+    </div>
+
     <div class="list-item attach">
         <label class="layui-form-label">国家</label>
         <div class="layui-input-inline">
@@ -130,6 +135,12 @@
                 yes: function (index, layero) {
                     var proname = $('#proname').val();
                     var proid = $('#proid').val();
+                    if ($('#projectRemark').html() == '') {
+                        $('#showRemark').hide();
+                    } else {
+                        $('#showRemark').show();
+                    }
+
                     if (proname && proid) {
                         layer.close(index);
                     } else {
