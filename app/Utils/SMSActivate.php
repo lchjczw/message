@@ -5,6 +5,7 @@ namespace App\Utils;
 
 use App\Utils\RequestError;
 use http\Exception\InvalidArgumentException;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class SMSActivate implements GetCodeInterface
@@ -167,6 +168,7 @@ class SMSActivate implements GetCodeInterface
         // 获取验证码转台
         if ($getNumber == 2) {
             if (strpos($result, 'STATUS_OK') === 0) {
+
                 $returnStatus = array('status' => 1, 'code' => explode(':', $result)[1]);
                 return $returnStatus;
             }

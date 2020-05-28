@@ -76,7 +76,8 @@ class GetCodeController extends Controller
 
         $data = SMSActivate::getInstance()->getStatus($codeReceive->thirty_id);
 
-        if ($data['code'] == 0) {
+
+        if ($data['status'] == 0) {
             return response()->json([
                 'code' => 0,
                 'msg' => '正在获取验证码',
@@ -85,8 +86,9 @@ class GetCodeController extends Controller
             ]);
         } else {
 
+
             if ($codeReceive->status != 1) {
-                
+
                 $codeReceive->update([
                     'content' => $data['code'],
                     'status' => 1
