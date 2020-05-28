@@ -94,6 +94,7 @@ class GetCodeController extends Controller
                     'status' => 1
                 ]);
 
+                // 扣钱
                 $user = User::find($request->user()->id);
                 $project = Project::find($codeReceive->project_id);
                 $user->update([
