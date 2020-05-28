@@ -77,7 +77,7 @@ class AddUserMoneyController extends AdminController
 
         return response()->json([
             'message' => "充值成功 !",
-            'redirect' => "/admin/addUserMoney",
+            'redirect' => "/" . env('ADMIN_ROUTE_PREFIX', 'admin') . "/addUserMoney",
             'status' => 'true',
         ]);
     }

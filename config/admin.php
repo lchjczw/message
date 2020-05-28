@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => '簡訊聚合',
+    'name' => '簡訊',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<img src="/vendors/dcat-admin/images/logo.png" width="35"> &nbsp;簡訊聚合平台',
+    'logo' => '<img src="/vendors/dcat-admin/images/logo.png" width="35"> &nbsp;簡訊平台',
 
     /*
     |--------------------------------------------------------------------------
@@ -75,7 +75,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => '簡訊聚合平台',
+    'title' => '簡訊平台',
 
     /*
     |--------------------------------------------------------------------------

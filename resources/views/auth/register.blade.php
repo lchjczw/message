@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>注册 -  - 簡訊聚合平台</title>
+    <title>注册 -  - 簡訊平台</title>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="/layui/css/global.css" media="all"/>
     <link rel="stylesheet" href="/css/login.css" media="all"/>
@@ -73,7 +73,7 @@
 <!-- LoginForm -->
 <div class="zyl_lofo_main" style="height: 450px">
     <fieldset class="layui-elem-field layui-field-title zyl_mar_02">
-        <legend>欢迎登陆 - 簡訊聚合平台</legend>
+        <legend>欢迎登陆 - 簡訊平台</legend>
     </fieldset>
     <div class="layui-row layui-col-space15">
         <form class="layui-form zyl_pad_01" action="">
