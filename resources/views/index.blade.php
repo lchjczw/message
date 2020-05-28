@@ -66,7 +66,7 @@
             <cite>簡訊解决方案</cite>
         </div>
         <div class="site-download">
-            <a href="/auth/login" class="layui-inline site-down"
+            <a href="/register" class="layui-inline site-down"
                target="_blank">
                 <cite class="layui-icon">&#xe658;</cite>
                 立即註冊
@@ -131,7 +131,7 @@
 
 <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?7141e532c0c247f3212c08eea43713cc";
         var s = document.getElementsByTagName("script")[0];
