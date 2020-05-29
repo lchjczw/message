@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>注册 -  - 簡訊平台</title>
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="/layui/css/global.css" media="all"/>
     <link rel="stylesheet" href="/css/login.css" media="all"/>
     <style>
@@ -148,7 +148,7 @@
 <!-- Jquery Js -->
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <!-- Layui Js -->
-<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.layuicdn.com/layui/layui.js"></script>
 <!-- Jqarticle Js -->
 <script type="text/javascript" src="/plugins/jparticle.min.js"></script>
 <script>

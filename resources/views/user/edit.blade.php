@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all"/>
     <style>
         form input.layui-input[disabled] {
             background: #f2f2f2;
@@ -137,7 +137,7 @@
     </div>
 
 </div>
-<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.layuicdn.com/layui/layui.js"></script>
 <script type="text/javascript">
     layui.config({
         base: "/"

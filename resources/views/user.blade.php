@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="/style/admin.css" media="all">
 
 
@@ -175,7 +175,7 @@
     </div>
 </div>
 
-<script src="/layui/layui.js"></script>
+<script src="https://www.layuicdn.com/layui/layui.js"></script>
 <script>
     layui.config({
         base: '/' //静态资源所在路径

@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all"/>
     <style>
         body {
             padding: 10px;
@@ -93,7 +93,7 @@
     </div>
 </form>
 
-<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.layuicdn.com/layui/layui.js"></script>
 <script type="text/javascript">
 
     layui.config({

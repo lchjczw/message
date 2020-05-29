@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all"/>
 </head>
 <style type="text/css">
     @media screen and (max-width: 720px) {
@@ -37,7 +37,7 @@
     <button class="layui-btn layui-btn-normal" data-type="reload">搜索</button>
 </div>
 <table class="layui-hide" id="smslist"></table>
-<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.layuicdn.com/layui/layui.js"></script>
 <script type="text/javascript">
     layui.use(['table', 'laydate'], function () {
         var table = layui.table;

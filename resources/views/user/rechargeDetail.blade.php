@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style type="text/css">
         @media screen and (max-width: 720px) {
@@ -38,7 +38,7 @@
     </div>
 </div>
 <table class="layui-hide" id="moneylist"></table>
-<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.layuicdn.com/layui/layui.js"></script>
 <script type="text/javascript">
     layui.use(['table', 'laydate'], function () {
         var table = layui.table;

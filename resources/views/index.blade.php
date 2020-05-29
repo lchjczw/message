@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="/layui/css/global.css" media="all">
 </head>
 <body class="site-home" id="LAY_home" style="background-color: #eee;" data-date="5-13">
@@ -113,7 +113,7 @@
     <i class="layui-icon">&#xe602;</i>
 </div>
 <div class="site-mobile-shade"></div>
-<script src="/layui/layui.js" charset="utf-8"></script>
+<script src="https://www.layuicdn.com/layui/layui.js" charset="utf-8"></script>
 <script>
     window.global = {
         pageType: 'index'
