@@ -10,7 +10,8 @@ use Dcat\Admin\Controllers\AdminController;
 
 class ProjectController extends AdminController
 {
-    protected $title='项目列表';
+    protected $title = '项目列表';
+
     /**
      * Make a grid builder.
      *
@@ -20,7 +21,7 @@ class ProjectController extends AdminController
     {
         return Grid::make(new Project(), function (Grid $grid) {
 
-            $grid->filter(function($filter){
+            $grid->filter(function ($filter) {
                 // 展开过滤器
 
                 // 在这里添加字段过滤器
@@ -75,11 +76,11 @@ class ProjectController extends AdminController
     {
         return Form::make(new Project(), function (Form $form) {
             $form->display('id');
-            $form->image('icon','图标')->rules('required');
-            $form->text('number','编号')->rules('required');
-            $form->text('name','项目名称')->rules('required');
-            $form->decimal('price','金额')->rules('required');
-            $form->textarea('description','描述');
+            $form->image('icon', '图标')->rules('required');
+            $form->text('number', '编号')->rules('required');
+            $form->text('name', '项目名称')->rules('required');
+            $form->decimal('price', '金额')->rules('required');
+            $form->editor('description', '描述');
             $form->display('created_at');
             $form->display('updated_at');
         });
