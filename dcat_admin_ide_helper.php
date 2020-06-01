@@ -34,19 +34,22 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection require
      * @property Grid\Column|Collection require_dev
      * @property Grid\Column|Collection icon
+     * @property Grid\Column|Collection price
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection phone
      * @property Grid\Column|Collection money
      * @property Grid\Column|Collection email_verified_at
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection amount
      * @property Grid\Column|Collection admin_user_id
      * @property Grid\Column|Collection user_id
-     * @property Grid\Column|Collection amount
      * @property Grid\Column|Collection project_id
      * @property Grid\Column|Collection country_id
      * @property Grid\Column|Collection content
      * @property Grid\Column|Collection status
+     * @property Grid\Column|Collection display_name
+     * @property Grid\Column|Collection code
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection uri
@@ -55,6 +58,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection http_method
      * @property Grid\Column|Collection http_path
      * @property Grid\Column|Collection role_id
+     * @property Grid\Column|Collection thirty_id
+     * @property Grid\Column|Collection value
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection payload
@@ -85,19 +90,22 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection require(string $label = null)
      * @method Grid\Column|Collection require_dev(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
+     * @method Grid\Column|Collection price(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection phone(string $label = null)
      * @method Grid\Column|Collection money(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection amount(string $label = null)
      * @method Grid\Column|Collection admin_user_id(string $label = null)
      * @method Grid\Column|Collection user_id(string $label = null)
-     * @method Grid\Column|Collection amount(string $label = null)
      * @method Grid\Column|Collection project_id(string $label = null)
      * @method Grid\Column|Collection country_id(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection status(string $label = null)
+     * @method Grid\Column|Collection display_name(string $label = null)
+     * @method Grid\Column|Collection code(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
@@ -106,6 +114,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection http_method(string $label = null)
      * @method Grid\Column|Collection http_path(string $label = null)
      * @method Grid\Column|Collection role_id(string $label = null)
+     * @method Grid\Column|Collection thirty_id(string $label = null)
+     * @method Grid\Column|Collection value(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection payload(string $label = null)
@@ -141,19 +151,22 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection require
      * @property Show\Field|Collection require_dev
      * @property Show\Field|Collection icon
+     * @property Show\Field|Collection price
      * @property Show\Field|Collection email
      * @property Show\Field|Collection phone
      * @property Show\Field|Collection money
      * @property Show\Field|Collection email_verified_at
      * @property Show\Field|Collection password
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection amount
      * @property Show\Field|Collection admin_user_id
      * @property Show\Field|Collection user_id
-     * @property Show\Field|Collection amount
      * @property Show\Field|Collection project_id
      * @property Show\Field|Collection country_id
      * @property Show\Field|Collection content
      * @property Show\Field|Collection status
+     * @property Show\Field|Collection display_name
+     * @property Show\Field|Collection code
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection order
      * @property Show\Field|Collection uri
@@ -162,6 +175,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection http_method
      * @property Show\Field|Collection http_path
      * @property Show\Field|Collection role_id
+     * @property Show\Field|Collection thirty_id
+     * @property Show\Field|Collection value
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection payload
@@ -192,19 +207,22 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection require(string $label = null)
      * @method Show\Field|Collection require_dev(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
+     * @method Show\Field|Collection price(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection phone(string $label = null)
      * @method Show\Field|Collection money(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection amount(string $label = null)
      * @method Show\Field|Collection admin_user_id(string $label = null)
      * @method Show\Field|Collection user_id(string $label = null)
-     * @method Show\Field|Collection amount(string $label = null)
      * @method Show\Field|Collection project_id(string $label = null)
      * @method Show\Field|Collection country_id(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection status(string $label = null)
+     * @method Show\Field|Collection display_name(string $label = null)
+     * @method Show\Field|Collection code(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)
@@ -213,6 +231,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection http_method(string $label = null)
      * @method Show\Field|Collection http_path(string $label = null)
      * @method Show\Field|Collection role_id(string $label = null)
+     * @method Show\Field|Collection thirty_id(string $label = null)
+     * @method Show\Field|Collection value(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection payload(string $label = null)
